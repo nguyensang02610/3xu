@@ -31,7 +31,7 @@ class adminlogin
             $alert = "User and Pass không nhập rỗng";
             return $alert;
         } else {
-            $query = "SELECT * FROM tbl_user WHERE user = '$adminUser' AND password = '$adminPass' LIMIT 1 ";
+            $query = "SELECT * FROM tbl_admin WHERE username = '$adminUser' AND password = '$adminPass' LIMIT 1 ";
             $result = $this->db->select($query);
             if ($result != false) {
                 //session_start();
@@ -40,12 +40,9 @@ class adminlogin
                 $value = $result->fetch_assoc();
                 Session::set('adminlogin', true); // set adminlogin đã tồn tại
                 // gọi function Checklogin để kiểm tra true.
-                Session::set('adminId', $value['id']);
-                Session::set('adminUser', $value['user']);
-                Session::set('adminHo', $value['ho']);
-                Session::set('adminName', $value['ten']);
-                Session::set('adminImage', $value['image']);
-                Session::set('adminQuyen', '0');
+                Session::set('adminId', $value['id_admin']);
+                Session::set('adminUser', $value['username']);
+                Session::set('adminQuyen', 1);
                 header("Location:index.php");
             } else {
                 $alert = "Tài khoản hoặc mật khẩu không đúng";

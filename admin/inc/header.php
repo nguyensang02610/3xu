@@ -1,14 +1,13 @@
 <?php
 include '../library/session.php';
 Session::checkSession();
-$quyen = $_SESSION['adminQuyen'];
 ?>
 
 <?php
-header("Cache-Control: no-cache, must-revalidate");
-header("Pragma: no-cache");
-header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
-header("Cache-Control: max-age=2592000");
+    header("Cache-Control: no-cache, must-revalidate");
+    header("Pragma: no-cache");
+    header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
+    header("Cache-Control: max-age=2592000");
 ?>
 
 <?php
@@ -27,7 +26,7 @@ $order = new cart();
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>T1 Admin - Dashboard</title>
+    <title>3Xu Admin</title>
     <!-- Bootrap icon-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <!-- Custom fonts for this template-->
@@ -52,7 +51,7 @@ $order = new cart();
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php" style="<?php if ($quyen == 1) echo 'pointer-events: none;color: #858796' ?>">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="bi bi-heart-fill"></i>
                     <!-- <i class="fas fa-laugh-wink"></i> -->
@@ -65,7 +64,7 @@ $order = new cart();
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a style="<?php if ($quyen == 1) echo 'pointer-events: none;color: #858796' ?>" class="nav-link" href="index.php">
+                <a class="nav-link" href="index.php">
                     <i class="bi bi-bar-chart-fill"></i>
                     <span>Thống kê</span>
                 </a>
@@ -79,7 +78,7 @@ $order = new cart();
             </div>
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a style="<?php if ($quyen == 2) echo 'pointer-events: none;color: #858796' ?>" class="nav-link" href="danhmucsp.php">
+                <a class="nav-link" href="danhmucsp.php">
                     <i class="bi bi-card-text"></i>
                     <span>Danh mục sản phẩm</span></a>
             </li>
@@ -127,7 +126,7 @@ $order = new cart();
             </div>
 
             <li class="nav-item">
-                <a style="<?php if ($quyen == 1 || $quyen == 2) echo 'pointer-events: none;color: #858796' ?>" class="nav-link" href="nhanvien.php">
+                <a class="nav-link" href="nhanvien.php">
                     <i class="bi bi-people-fill"></i>
                     <span>Danh sách nhân viên</span></a>
             </li>
@@ -197,95 +196,17 @@ $order = new cart();
                                     </div>
                                 </form>
                             </div>
-                        </li>
-
-                        <!-- Nav Item - Alerts -->
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-bell fa-fw"></i>
-                                <!-- Counter - Alerts -->
-                                <?php
-                                    $order_list = $order->order_notification();
-                                    $row = mysqli_num_rows ( $order_list );
-                                ?>
-                                <span class="badge badge-danger badge-counter"><?php echo $row ?></span>
-                            </a>
-                            <!-- Dropdown - Alerts -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
-                                <h6 class="dropdown-header">
-                                    Thông báo
-                                </h6>
-                                <?php
-                                $order_list = $order->order_notification();
-                                if ($order_list) {
-                                    while ($result = $order_list->fetch_assoc()) {
-                                ?>
-                                    <a class="dropdown-item d-flex align-items-center" href="#">
-                                        <div class="mr-3">
-                                            <div class="icon-circle bg-primary">
-                                                <i class="fas fa-file-alt text-white"></i>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="small text-gray-500"><?php echo $result['date_order'] ?></div>
-                                            <span class="font-weight-bold"><?php echo $result['ho_ten'] ?> vừa đặt 1 đơn hàng!</span>
-                                        </div>
-                                    </a>
-                                    <?php
-                                        }
-                                    }
-                                    ?>
-                                        <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
-                            </div>
-                        </li>
-
-                        <!-- Nav Item - Messages -->
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-envelope fa-fw"></i>
-                                <!-- Counter - Messages -->
-                                <span class="badge badge-danger badge-counter">7</span>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
-                                <h6 class="dropdown-header">
-                                    Khách hàng mới
-                                </h6>
-                                <?php
-                                $order_list = $order->order_notification();
-                                if ($order_list) {
-                                    while ($result = $order_list->fetch_assoc()) {
-                                ?>
-                                    <a class="dropdown-item d-flex align-items-center" href="#">
-                                        <div class="mr-3">
-                                            <div class="icon-circle bg-primary">
-                                                <i class="fas fa-file-alt text-white"></i>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="small text-gray-500"><?php echo $result['date_order'] ?></div>
-                                            <span class="font-weight-bold"><?php echo $result['ho_ten'] ?> vừa đặt 1 đơn hàng!</span>
-                                        </div>
-                                    </a>
-                                    <?php
-                                        }
-                                    }
-                                    ?>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
-                            </div>
-                        </li>
-
-                        <div class="topbar-divider d-none d-sm-block"></div>
+                            </li>
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Xin chào
                                     <?php
-                                    echo $_SESSION['adminHo'] . " " . $_SESSION['adminName'];
+                                    echo "Admin";
                                     ?>
                                 </span>
-                                <img class="img-profile rounded-circle" src="./uploads/nhanvien/<?php echo $_SESSION['adminImage']; ?>">
+                                <img class="img-profile rounded-circle" src="./uploads/nhanvien/72f7b54c02.jpg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -304,7 +225,6 @@ $order = new cart();
                                 </a>
                             </div>
                             <!-- Logout Modal-->
-
                             <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
@@ -329,7 +249,6 @@ $order = new cart();
                                 </div>
                             </div>
                         </li>
-
                     </ul>
                 </nav>
                 <!-- End of Topbar -->

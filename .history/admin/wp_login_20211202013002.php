@@ -81,10 +81,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
                                             value="ĐĂNG NHẬP">
                                         <hr>
                                         <div class="btn btn-google btn-user btn-block">
-                                            HNH
+                                            Nguyễn Văn Sang
                                         </div>
                                         <div class="btn btn-facebook btn-user btn-block">
-                                            D14HTTMDT1
+                                            D14CNPM1
                                         </div>
                                     </form>
                                     <hr>

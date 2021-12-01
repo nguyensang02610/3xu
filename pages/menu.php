@@ -8,11 +8,11 @@
    } 
 ?>
 <div class="menu">
-<nav class="navbar navbar-expand-sm " style="background-color:#58dfb4;">
+<nav class="navbar navbar-expand-sm " style="background-color:#FF5403;">
    <ul class="navbar-nav" >
       <li class="nav-item" >
          <a class="nav-link navbar-brand" href="#">
-         <img src="img/MOONSTORE.png" style="width:64px;">
+         <img src="img/HNH.png" style="width:64px;">
          </a>
       </li>
       <li class="nav-item active">
@@ -40,7 +40,7 @@
          <a class="nav-link text-white" href="index.php?quanly=lienhe" style="margin-top:20px">Liên hệ</a>
       </li>
       <li class="nav-item active">
-         <a class="nav-link text-white" href="index.php?quanly=giohang" style="margin-top:20px">Giỏ hàng</a>
+         <a class="nav-link text-white" href="index.php?quanly=giohang" style="margin-top:20px"><i class="fas fa-shopping-cart"></i></a>
       </li>
       <?php
       if (isset($_SESSION['dangky'])) {

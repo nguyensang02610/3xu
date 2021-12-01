@@ -5,7 +5,7 @@
 	
 ?>
 <div class="space" style="margin-top: 25px;">
-    		<p style="text-align: center;font-size: 30px;font-family: sans-serif;font-weight: bold;color: #616161;"> SẢN PHẨM NỔI BẬT NHẤT</p>
+    		<p style="text-align: center;font-size: 30px;font-family: sans-serif;font-weight: lighter;color: #FF5403;"> SẢN PHẨM NỔI BẬT NHẤT</p>
 </div>
 	<ul class="product_list">
 		<?php
@@ -27,7 +27,7 @@
 		?>
 	</ul>
 <div class="space" style="margin-top: 30px;">
-    		<p style="text-align: center;font-size: 30px;font-family: sans-serif;font-weight: bold;color: #616161;"> DANH MỤC TIÊU BIỂU</p>
+    		<p style="text-align: center;font-size: 30px;font-family: sans-serif;font-weight:lighter;color: #FF5403;"> DANH MỤC TIÊU BIỂU</p>
 			<div class="row">
 	<div class="col-lg-4 col-md-6">
 		<img src="./img/banner/flexport_590x.jpg" class="img-thumbnail" alt="...">

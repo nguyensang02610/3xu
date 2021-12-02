@@ -47,7 +47,7 @@
     		<p style="text-align: center;font-size: 30px;font-family: sans-serif;font-weight: bold;color: gray;"> </p>
 			<div class="row">
 	<div class="col-lg-4 col-md-6">
-		<img src="./img/banner/email_1200x.jpg" style="width:1400px ; height:469px; margin-bottom: 60px;" alt="...">
+		<img src="./img/banner/email_1200x.jpg" style="width:1520px ; height:469px; margin-bottom: 60px;" alt="...">
 	</div>
 </div>
 </div>

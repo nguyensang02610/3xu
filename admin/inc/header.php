@@ -56,7 +56,7 @@ $order = new cart();
                     <i class="bi bi-heart-fill"></i>
                     <!-- <i class="fas fa-laugh-wink"></i> -->
                 </div>
-                <div class="sidebar-brand-text mx-3">T1 Admin <sup>3</sup></div>
+                <div class="sidebar-brand-text mx-3">HNH - Admin </div>
             </a>
 
             <!-- Divider -->
@@ -206,7 +206,7 @@ $order = new cart();
                                     echo "Admin";
                                     ?>
                                 </span>
-                                <img class="img-profile rounded-circle" src="./uploads/nhanvien/72f7b54c02.jpg">
+                                <img class="img-profile rounded-circle" src="./uploads/HNH.png">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">

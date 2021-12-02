@@ -20,12 +20,12 @@
                     <li>Linkedin</li>
                 </ul>
             </div>
-            <div class="col-md-2 col-sm-2 col-xs-2">
+            <div class="col-md-2 col-sm-2 col-xs-2" style="width: 28%">
                 <h5 class="heading">Contact with us</h5>
                 <ul class="card-text">
-                    <li><i class="fas fa-phone-alt"></i>(+84) 0327328369</li>
-                    <li><i class="fas fa-envelope">hnhstore@gmail.com</i></li>
-                    <li><i class="fas fa-store"></i>235 Hoang Quoc Viet, Hanoi, Vietnam</li>
+                    <li><i class="fas fa-phone-alt">&#160;</i>(+84) 0327328369</li>
+                    <li><i class="fas fa-envelope">&#160;</i>hnhstore@gmail.com</li>
+                    <li><i class="fas fa-store">&#160;</i>235 Hoàng Quốc Việt, phường Cổ Nhuế 1, Quận Bắc Từ Liêm, Hà Nội</li>
                 </ul>
             </div>
         </div>

@@ -249,11 +249,11 @@ ul {
 
 ul>li {
     padding: 4px;
-    color: #C5CAE9
+    color: #7a5e5e
 }
 
 ul>li:hover {
-    color: #957bda;
+    color: #FF5403;
     cursor: pointer
 }
 

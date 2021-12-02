@@ -73,10 +73,10 @@
                 </div>
             </div>
           
-            <div class="col-md-2 col-sm-2 col-xs-2" style="width:28%;margin-left:350px">
-                <h5 class="heading" style="text-align: center;">CONTACT WITH US</h5>
-                <ul class="card-text" style="text-align: center;">
-                    <li style="margin-right:26px"><i class="fas fa-phone-alt" >&#160;</i>(+84)0327328369</li>
+            <div class="col-md-2 col-sm-2 col-xs-2" style="width:28%;margin-left:330px">
+                <h5 class="heading">CONTACT WITH US</h5>
+                <ul class="card-text" >
+                    <li style="margin-right:25px"><i class="fas fa-phone-alt" >&#160;</i>(+84)0327328369</li>
                     <li><i class="fas fa-envelope">&#160;</i>hnhstore@gmail.com</li>
                     <li><i class="fas fa-store">&#160;</i>235 Hoàng Quốc Việt, phường Cổ Nhuế 1, Quận Bắc Từ Liêm, Hà Nội</li>
                 </ul>
@@ -92,57 +92,6 @@
           >
             <img
               src="./img/baodaairpod/pig_2_1349x.jpg"
-              class="w-100"
-            />
-            <a href="#!">
-              <div
-                class="mask"
-                style="background-color: rgba(251, 251, 251, 0.2);"
-              ></div>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-          <div
-            class="bg-image hover-overlay ripple shadow-1-strong rounded"
-            data-ripple-color="light"
-          >
-            <img
-              src="./img/boardgame/h2.jpg"
-              class="w-100"
-            />
-            <a href="#!">
-              <div
-                class="mask"
-                style="background-color: rgba(251, 251, 251, 0.2);"
-              ></div>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-          <div
-            class="bg-image hover-overlay ripple shadow-1-strong rounded"
-            data-ripple-color="light"
-          >
-            <img
-              src="./img/thiephopdiem/h1.jpg"
-              class="w-100"
-            />
-            <a href="#!">
-              <div
-                class="mask"
-                style="background-color: rgba(251, 251, 251, 0.2);"
-              ></div>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-          <div
-            class="bg-image hover-overlay ripple shadow-1-strong rounded"
-            data-ripple-color="light"
-          >
-            <img
-              src="./img/Leathercharm/h3.jpg"
               class="w-100"
             />
             <a href="#!">
@@ -176,7 +125,58 @@
             data-ripple-color="light"
           >
             <img
-              src="./img/lotdiathan/dennhay.jpg"
+              src="./img/bookmark/steve_jobs1.jpg"
+              class="w-100"
+            />
+            <a href="#!">
+              <div
+                class="mask"
+                style="background-color: rgba(251, 251, 251, 0.2);"
+              ></div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+          <div
+            class="bg-image hover-overlay ripple shadow-1-strong rounded"
+            data-ripple-color="light"
+          >
+            <img
+              src="../img/Leathercharm/20190218_143520_1349x.jpg"
+              class="w-100"
+            />
+            <a href="#!">
+              <div
+                class="mask"
+                style="background-color: rgba(251, 251, 251, 0.2);"
+              ></div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+          <div
+            class="bg-image hover-overlay ripple shadow-1-strong rounded"
+            data-ripple-color="light"
+          >
+            <img
+              src="../img/Mockhoa/Untitled_Session01427a_5a1f4edc-225f-414f-877d-6b02c0f2476a_590x.jpg"
+              class="w-100"
+            />
+            <a href="#!">
+              <div
+                class="mask"
+                style="background-color: rgba(251, 251, 251, 0.2);"
+              ></div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+          <div
+            class="bg-image hover-overlay ripple shadow-1-strong rounded"
+            data-ripple-color="light"
+          >
+            <img
+              src="../img/lotdiathan/3xu2737_3008x.jpg"
               class="w-100"
             />
             <a href="#!">

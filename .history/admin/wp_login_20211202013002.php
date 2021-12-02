@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
                 <div class="card o-hidden border-0 shadow-lg my-5-self">
                     <div class="card-body p-0">
-                        <!-- Nested Row within Card Body hello -->
+                        <!-- Nested Row within Card Body -->
                         <div class="row">
                             <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
                             <div class="col-lg-6">
@@ -81,14 +81,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
                                             value="ĐĂNG NHẬP">
                                         <hr>
                                         <div class="btn btn-google btn-user btn-block">
-                                           <p> Đăng nhập với Gmail</p>
+                                            Nguyễn Văn Sang
                                         </div>
                                         <div class="btn btn-facebook btn-user btn-block">
-                                           <p> Đăng nhập  với Facebook</p>
-                                           HNH
-                                        </div>
-                                        <div class="btn btn-facebook btn-user btn-block">
-                                            D14HTTMDT1
+                                            D14CNPM1
                                         </div>
                                     </form>
                                     <hr>

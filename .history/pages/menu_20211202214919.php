@@ -39,7 +39,9 @@
       <li class="nav-item active">
          <a class="nav-link text-white" href="index.php?quanly=lienhe" style="margin-top:20px">Liên hệ</a>
       </li>
-   
+      <!-- <li class="nav-item active">
+         <a class="nav-link text-white" href="index.php?quanly=giohang" style="margin-top:20px"><i class="fas fa-shopping-cart"></i></a>
+      </li> -->
    </ul>
 
    <ul class="navbar-nav ml-auto">

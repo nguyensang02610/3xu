@@ -73,9 +73,9 @@
                 </div>
             </div>
           
-            <div class="col-md-2 col-sm-2 col-xs-2" style="width:28%;margin-left:350px">
-                <h5 class="heading" style="text-align: center;">CONTACT WITH US</h5>
-                <ul class="card-text" style="text-align: center;">
+            <div class="col-md-2 col-sm-2 col-xs-2" style="width:28%;margin-left:330px">
+                <h5 class="heading">CONTACT WITH US</h5>
+                <ul class="card-text" >
                     <li style="margin-right:26px"><i class="fas fa-phone-alt" >&#160;</i>(+84)0327328369</li>
                     <li><i class="fas fa-envelope">&#160;</i>hnhstore@gmail.com</li>
                     <li><i class="fas fa-store">&#160;</i>235 Hoàng Quốc Việt, phường Cổ Nhuế 1, Quận Bắc Từ Liêm, Hà Nội</li>

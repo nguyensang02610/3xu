@@ -39,31 +39,33 @@
       <li class="nav-item active">
          <a class="nav-link text-white" href="index.php?quanly=lienhe" style="margin-top:20px">Liên hệ</a>
       </li>
-   
+      <!-- <li class="nav-item active">
+         <a class="nav-link text-white" href="index.php?quanly=giohang" style="margin-top:20px"><i class="fas fa-shopping-cart"></i></a>
+      </li> -->
    </ul>
 
    <ul class="navbar-nav ml-auto">
-      <form class="form-inline" action="index.php?quanly=timkiem" method="POST" style="margin-left:20px">
+      <form class="form-inline" action="index.php?quanly=timkiem" method="POST" style="margin-right:350px">
          <input class="form-control mr-sm-2" type="text" placeholder="..." name="tukhoa" >
-         <button class="btn btn-success" type="submit" name="timkiem" value="Tìm kiếm" style="background:#ffffff"><i class="fas fa-search" style="color: #FF5403;"></i></button>
+         <button class="btn btn-success" type="submit" name="timkiem" value="Tìm kiếm" ><i class="fas fa-search"></i></button>
       </form>
       <?php
       if (isset($_SESSION['dangky'])) {
       ?>
       <ul>
          <li class="nav-item active">
-            <a class="nav-link text-white" href="index.php?dangxuat=1" style="margin-bottom:20px"><i class="fas fa-user"></i> Đăng Xuất</a>
+            <a class="nav-link text-white" href="index.php?dangxuat=1" style="margin-top:20px"><i class="fas fa-user"></i> Đăng Xuất</a>
       <?php
       } else {
       ?>
          <li class="nav-item active">
-            <a class="nav-link text-white" href="index.php?quanly=dangky" style="margin-bottom:4px"><i class="fas fa-user"></i> Đăng ký</a>
+            <a class="nav-link text-white" href="index.php?quanly=dangky" style="margin-top:20px"><i class="fas fa-user"></i> Đăng ký</a>
          </li>
       <?php
       }
       ?>
        <li class="nav-item active">
-         <a class="nav-link text-white" href="index.php?quanly=giohang" style="margin-bottom:4px"><i class="fas fa-shopping-cart"></i></a>
+         <a class="nav-link text-white" href="index.php?quanly=giohang" style="margin-top:20px"><i class="fas fa-shopping-cart"></i></a>
       </li>
    </ul>
    </ul>

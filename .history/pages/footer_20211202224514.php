@@ -73,10 +73,10 @@
                 </div>
             </div>
           
-            <div class="col-md-2 col-sm-2 col-xs-2" style="width:28%;margin-left:350px">
-                <h5 class="heading" style="text-align: center;">CONTACT WITH US</h5>
-                <ul class="card-text" style="text-align: center;">
-                    <li style="margin-right:26px"><i class="fas fa-phone-alt" >&#160;</i>(+84)0327328369</li>
+            <div class="col-md-2 col-sm-2 col-xs-2" style="width:28%;margin-left:330px">
+                <h5 class="heading">CONTACT WITH US</h5>
+                <ul class="card-text" >
+                    <li style="margin-right:15px"><i class="fas fa-phone-alt" >&#160;</i>(+84)0327328369</li>
                     <li><i class="fas fa-envelope">&#160;</i>hnhstore@gmail.com</li>
                     <li><i class="fas fa-store">&#160;</i>235 Hoàng Quốc Việt, phường Cổ Nhuế 1, Quận Bắc Từ Liêm, Hà Nội</li>
                 </ul>
@@ -91,7 +91,7 @@
             data-ripple-color="light"
           >
             <img
-              src="./img/baodaairpod/pig_2_1349x.jpg"
+              src="https://mdbootstrap.com/img/new/fluid/city/113.jpg"
               class="w-100"
             />
             <a href="#!">
@@ -108,7 +108,7 @@
             data-ripple-color="light"
           >
             <img
-              src="./img/boardgame/h2.jpg"
+              src="https://mdbootstrap.com/img/new/fluid/city/111.jpg"
               class="w-100"
             />
             <a href="#!">
@@ -125,7 +125,7 @@
             data-ripple-color="light"
           >
             <img
-              src="./img/thiephopdiem/h1.jpg"
+              src="https://mdbootstrap.com/img/new/fluid/city/112.jpg"
               class="w-100"
             />
             <a href="#!">
@@ -142,7 +142,7 @@
             data-ripple-color="light"
           >
             <img
-              src="./img/Leathercharm/h3.jpg"
+              src="https://mdbootstrap.com/img/new/fluid/city/114.jpg"
               class="w-100"
             />
             <a href="#!">
@@ -159,7 +159,7 @@
             data-ripple-color="light"
           >
             <img
-              src="./img/bookmark/steve_jobs1.jpg"
+              src="https://mdbootstrap.com/img/new/fluid/city/115.jpg"
               class="w-100"
             />
             <a href="#!">
@@ -176,7 +176,7 @@
             data-ripple-color="light"
           >
             <img
-              src="./img/lotdiathan/dennhay.jpg"
+              src="https://mdbootstrap.com/img/new/fluid/city/116.jpg"
               class="w-100"
             />
             <a href="#!">

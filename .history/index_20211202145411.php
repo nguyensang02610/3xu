@@ -45,7 +45,6 @@
         integrity="sha512-eP8DK17a+MOcKHXC5Yrqzd8WI5WKh6F1TIk5QZ/8Lbv+8ssblcz7oGC8ZmQ/ZSAPa7ZmsCU4e/hcovqR8jfJqA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript" src="./js/app.js"></script>
-    <script type="text/javascript" src="./js/detail.js"></script>
     <!-- Huyền gà vcđ -->
 </body>
 

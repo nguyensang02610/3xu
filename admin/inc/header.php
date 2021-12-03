@@ -78,14 +78,14 @@ $order = new cart();
             </div>
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="danhmucsp.php">
+                <a class="nav-link" href="quan-ly-danh-muc-san-pham">
                     <i class="bi bi-card-text"></i>
                     <span>Danh mục sản phẩm</span></a>
             </li>
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="product_list.php">
+                <a class="nav-link" href="quan-ly-san-pham">
                     <i class="bi bi-box-seam"></i>
                     <span>Sản phẩm</span></a>
             </li>
@@ -140,7 +140,7 @@ $order = new cart();
 
             <!-- Nav Web site -->
             <li class="nav-item">
-                <a class="nav-link" href="/doan_cnpm/home.php" target="_blank">
+                <a class="nav-link" href="/index.php" target="_blank">
                     <i class="bi bi-arrow-up-right-circle"></i>
                     <span>Website</span></a>
             </li>

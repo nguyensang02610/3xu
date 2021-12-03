@@ -1,0 +1,7 @@
+RewriteEngine On
+
+RewriteRule "quan-tri" "admin/index.php"
+
+RewriteRule "quan-ly-san-pham" "product_list.php"
+
+RewriteRule "quan-ly-danh-muc-san-pham" "danhmucsp.php"

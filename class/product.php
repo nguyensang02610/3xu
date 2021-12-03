@@ -68,6 +68,7 @@ class product //Lớp sản phẩm
         $result = $this->db->insert($query);
         if ($result) {
             echo "<script>alert('Thêm mới sản phẩm thành công.');</script>";
+			echo "<script> window.location = 'product_list.php' </script>";
         } else {
             echo "<script>alert('Lỗi khi thêm sản phẩm, xóa cache trình duyệt hoặc bấm F5.');</script>";
         }
@@ -180,7 +181,6 @@ class product //Lớp sản phẩm
 				echo "<script> window.location = 'product_list.php' </script>";
 			} else {
 				echo "<script>alert('Lỗi khi sửa sản phẩm, xóa cache trình duyệt hoặc bấm F5.');</script>";
-				echo "<script> window.location = 'product_list.php' </script>";
 			}
 		}
 	}

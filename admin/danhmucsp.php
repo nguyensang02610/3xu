@@ -36,7 +36,7 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Danh sách sản phẩm</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Danh sách danh mục sản phẩm</h6>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -44,9 +44,7 @@
                     <thead>
                         <tr>
                             <th style="width:10%">ID danh mục</th>
-                            <th style="width:20%">Tên danh mục</th>
-                            <th style="width:23%">Hình ảnh</th>
-                            <th style="width:23%">Banner nhãn hàng</th>
+                            <th style="width:50%">Tên danh mục</th>
                             <th style="width:18%">Ngày tạo</th>
                             <th>Xử lý</th>
                         </tr>
@@ -54,9 +52,7 @@
                     <tfoot>
                         <tr>
                             <th>ID danh mục</th>
-                            <th>Tên danh mục</th>
-                            <th>Hình ảnh</th>
-                            <th>Banner nhãn hàng</th>
+                            <th>Tên danh mục</th>s
                             <th>Ngày tạo</th>
                             <th>Xử lý</th>
                         </tr>
@@ -67,19 +63,16 @@
                         $i = 0;
                         if ($brand_list) {
                             while ($result = $brand_list->fetch_assoc()) {
-                                $i++;
                         ?>
                                 <tr>
-                                    <td><?php echo $result['brand_id']; ?></td>
-                                    <td><?php echo $result['brand_name']; ?></td>
-                                    <td><img class="image_product-1" src="./uploads/brand_image/<?php echo $result['image']; ?>"></td>
-                                    <td><img class="image_product-2" src="./uploads/brand_image/<?php echo $result['banner_image']; ?>"></td>
+                                    <td><?php echo $result['id_danhmuc']; ?></td>
+                                    <td><?php echo $result['tendanhmuc']; ?></td>
                                     <td><?php echo $result['date_create']; ?></td>
                                     <td style="text-align: center;">
-                                        <a href="?brand_id=<?php echo $result['brand_id'] ?>">
+                                        <a href="?brand_id=<?php echo $result['id_danhmuc'] ?>">
                                             <button class="btn_1"><i class="bi bi-x">Xóa</i></button>
                                         </a>
-                                        <a href="danhmucsp_edit.php?brand_id=<?php echo $result['brand_id'] ?>">
+                                        <a href="danhmucsp_edit.php?brand_id=<?php echo $result['id_danhmuc'] ?>">
                                             <button class="btn_2"><i class="bi bi-pencil">Sửa</i></button>
                                         </a>
                                     </td>

@@ -85,6 +85,11 @@ $order = new cart();
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
+                <a class="nav-link" href="product_list.php">
+                    <i class="bi bi-box-seam"></i>
+                    <span>Sản phẩm</span></a>
+            </li>
+            <!-- <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="bi bi-box-seam"></i>
                     <span>Sản phẩm</span>
@@ -96,7 +101,7 @@ $order = new cart();
                         <a class="collapse-item" href="product_list.php">Danh sách sản phẩm</a>
                     </div>
                 </div>
-            </li>
+            </li> -->
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">

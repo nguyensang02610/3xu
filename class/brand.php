@@ -129,7 +129,7 @@ class brand
 
 	public function show_brand()
 	{
-		$query = "SELECT * FROM tbl_brand ";
+		$query = "SELECT * FROM tbl_danhmuc ";
 		$result = $this->db->select($query);
 		return $result;
 	}

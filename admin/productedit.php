@@ -1,7 +1,6 @@
 <?php include 'inc/header.php'; ?>
 <?php include '../class/product.php';  ?>
 <?php include '../class/brand.php';  ?>
-<?php include '../class/hedieuhanh.php';  ?>
 
 <?php
     $pd = new product();
@@ -43,21 +42,15 @@
                         <div class="input_product">
                             <div class="col-xl-7 block_input">
                                 <label for="firstName" class="form-label">Tên sản phẩm</label>
-                                <input type="text" name="tensp" class="form-control" placeholder="" value="<?php echo $result_product['tensp'] ?>"  >
+                                <input type="text" name="product_name" class="form-control" placeholder="" value="<?php echo $result_product['product_name'] ?>"  >
 
-                            </div>
-                            <!-- Tên rút gọn sản phẩm -->
-                            <div class="col-xl-4 block_input">
-                                <label for="tensp_shortcut" class="form-label">Tên rút gọn sản phẩm</label>
-                                <input type="text" class="form-control" name="tensp_shortcut" placeholder="" value="<?php echo $result_product['tensp_shortcut'] ?>"  >
-                                
                             </div>
                         </div>
                         <!-- Brand -->
                         <div class="input_product">
                             <div class="col-xl-7 block_input">
                                 <label for="price" class="form-label">Thương hiệu sản phẩm</label>
-                                <select class="form-select" name="brand" aria-label="Default select example">
+                                <select class="form-select" name="product_gr" aria-label="Default select example">
                                     <!-- <option></option> -->
                                     <?php
                                     $brand = new brand();
@@ -68,13 +61,13 @@
                                     ?>
                                     <option 
                                     <?php
-                                        if ($result['brand_name'] == $result_product['brand'])
+                                        if ($result['tendanhmuc'] == $result_product['product_gr'])
                                         {
                                             echo 'selected';
                                         }
                                     ?>
-                                    value="<?php echo $result['brand_name'];?>"> 
-                                    <?php echo $result['brand_name']?>
+                                    value="<?php echo $result['tendanhmuc'];?>"> 
+                                    <?php echo $result['tendanhmuc']?>
                                     </option>
                                     <?php
                                         }
@@ -87,153 +80,14 @@
                         <!-- Gía + số lượng nhập cho sp -->
                         <div class="input_product">
                             <div class="col-md-3 block_input">
-                                <label for="price" class="form-label">Giá gốc sp</label>
-                                <input type="number" id="numbers" class="form-control"  name="price" placeholder="" value="<?php echo $result_product['price'] ?>"  >
-
-                            </div>
-                            <!-- Gía giảm -->
-                            <div class="col-md-3 block_input">
-                                <label for="price_discount" class="form-label">Giá Sale</label>
-                                <input type="number" id="numbers" class="form-control numbers" name="price_discount" placeholder="" value="<?php echo $result_product['price_discount']; ?>"  >
+                                <label for="price" class="form-label">Giá sản phẩm</label>
+                                <input type="number" id="numbers" class="form-control"  name="product_price" placeholder="" value="<?php echo $result_product['product_price'] ?>"  >
 
                             </div>
                             <!-- SL Nhập -->
                             <div class="col-md-2 block_input">
                                 <label for="sl_nhap" class="form-label">Số lượng nhập</label>
-                                <input type="number" class="form-control"  name="sl_nhap" placeholder="" value="<?php echo $result_product['sl_nhap'] ?>" >
-
-                            </div>
-                        </div>
-                        <!-- Hệ điều hành -->
-                        <div class="input_product">
-                            <div class="col-xl-7 block_input">
-                                <label for="firstName" class="form-label">Hệ điều hành</label>
-                                <select class="form-select" name="hedieuhanh" aria-label="Default select example">
-                                    <!-- <option></option> -->
-                                    <?php
-                                    $window = new hedieuhanh();
-                                    $window_list = $window -> show_hdh();
-                                    if ($window_list) 
-                                    {
-                                        while ($result = $window_list->fetch_assoc()) {
-
-                                    ?>
-                                    <option 
-                                    <?php
-                                        if ($result['hdh_name'] === $result_product['hedieuhanh'])
-                                        {
-                                            echo 'selected';
-                                        }
-                                    ?>
-                                    value="<?php echo $result['hdh_name'];?>"> 
-                                    <?php echo $result['hdh_name']?>
-                                    </option>
-                                    <?php
-                                        }
-                                    }
-                                    ?>
-                                </select>
-                            </div>
-                        </div>
-                        <!-- Tên CPU -->
-                        <div class="input_product">
-                            <div class="col-xl-7 block_input">
-                                <label for="firstName" class="form-label">Tên CPU</label>
-                                <input type="text" class="form-control" name="cpu" placeholder="" value="<?php echo $result_product['cpu'] ?>"  >
-
-                            </div>
-                            <!-- Tên rút gọn sản phẩm -->
-                            <div class="col-xl-4 block_input">
-                                <label for="tensp_shortcut" class="form-label">Tên CPU rút gọn</label>
-                                <input type="text" class="form-control" name="cpu_shortcut" placeholder="" value="<?php echo $result_product['cpu_shortcut'] ?>"  >
-
-                            </div>
-                        </div>
-                        <!-- VGA CARD MÀN HÌNH -->
-                        <div class="input_product">
-                            <div class="col-xl-7 block_input">
-                                <label for="firstName" class="form-label">Card màn hình</label>
-                                <input type="text" class="form-control" name="gpu" placeholder="" value="<?php echo $result_product['gpu'] ?>"  >
-
-                            </div>
-                            <!-- Tên rút gọn sản phẩm -->
-                            <div class="col-xl-4 block_input">
-                                <label for="tensp_shortcut" class="form-label">Tên Card màn hình rút gọn</label>
-                                <input type="text" class="form-control" name="gpu_shortcut" placeholder="" value="<?php echo $result_product['gpu_shortcut'] ?>"  >
-
-                            </div>
-                        </div>
-                        <!-- RAM -->
-                        <div class="input_product">
-                            <div class="col-xl-7 block_input">
-                                <label for="firstName" class="form-label">RAM</label>
-                                <input type="text" class="form-control" name="ram" placeholder="" value="<?php echo $result_product['ram'] ?>"  >
-
-                            </div>
-                            <!-- Tên rút gọn sản phẩm -->
-                            <div class="col-xl-4 block_input">
-                                <label for="tensp_shortcut" class="form-label">Tên RAM rút gọn</label>
-                                <input type="text" class="form-control" name="ram_shortcut" placeholder="" value="<?php echo $result_product['ram_shortcut'] ?>"  >
-
-                            </div>
-                        </div>
-                        <!-- Ổ CỨNG SSD -->
-                        <div class="input_product">
-                            <div class="col-xl-7 block_input">
-                                <label for="firstName" class="form-label">Thông số ổ cứng</label>
-                                <input type="text" class="form-control" name="ssd" placeholder="" value="<?php echo $result_product['ssd'] ?>"  >
-
-                            </div>
-                            <!-- Tên rút gọn sản phẩm -->
-                            <div class="col-xl-4 block_input">
-                                <label for="tensp_shortcut" class="form-label">Thông số ổ cứng rút gọn</label>
-                                <input type="text" class="form-control" name="ssd_shortcut" placeholder="" value="<?php echo $result_product['ssd_shortcut'] ?>"  >
-
-                            </div>
-                        </div>
-                        <!-- Màn hình -->
-                        <div class="input_product">
-                            <div class="col-xl-7 block_input">
-                                <label for="firstName" class="form-label">Thông số màn hình</label>
-                                <input type="text" class="form-control" name="manhinh" placeholder="" value='<?php echo $result_product["manhinh"] ?>'  >
-
-                            </div>
-                            <!-- Tên rút gọn sản phẩm -->
-                            <div class="col-xl-4 block_input">
-                                <label for="tensp_shortcut" class="form-label">Thông số màn hình rút gọn</label>
-                                <input type="text" class="form-control" name="manhinh_shortcut" placeholder="" value='<?php echo $result_product["manhinh_shortcut"] ?>'  >
-
-                            </div>
-                        </div>
-                        <!-- Wifi -->
-                        <div class="input_product">
-                            <div class="col-xl-7 block_input">
-                                <label for="firstName" class="form-label">Kết nối mạng</label>
-                                <input type="text" class="form-control" name="wifi" placeholder="" value="<?php echo $result_product['wifi'] ?>"  >
-
-                            </div>
-                        </div>
-                        <!-- Bàn phím -->
-                        <div class="input_product">
-                            <div class="col-xl-7 block_input">
-                                <label for="firstName" class="form-label">Thông số bàn phím</label>
-                                <input type="text" class="form-control" name="banphim" placeholder="" value="<?php echo $result_product['banphim'] ?>"  >
-
-                            </div>
-                        </div>
-                        <!-- Kích thước -->
-                        <div class="input_product">
-                            <div class="col-xl-7 block_input">
-                                <label for="firstName" class="form-label">Kích thước</label>
-                                <input type="text" class="form-control" name="kichthuoc" placeholder="" value="<?php echo $result_product['kichthuoc'] ?>"  >
-
-                            </div>
-                        </div>
-                        <!-- Trọng lượng -->
-                        <div class="input_product">
-                            <div class="col-xl-7 block_input">
-                                <label for="firstName" class="form-label">Trọng lượng</label>
-                                <input type="text" class="form-control" name="trongluong" placeholder="" value="<?php echo $result_product['trongluong'] ?>"  >
+                                <input type="number" class="form-control"  name="product_quantity" placeholder="" value="<?php echo $result_product['product_quantity'] ?>" >
 
                             </div>
                         </div>
@@ -242,7 +96,7 @@
                             <div class="col-xl-7 block_input">
                                 <label for="firstName" class="form-label">Mô tả</label>
                                 <!-- <input type="text" class="form-control" id="firstName" placeholder="" value=""  > -->
-                                <textarea name="description" class="txt_desci"><?php echo $result_product['description'] ?></textarea>
+                                <textarea name="product_description" class="txt_desci"><?php echo $result_product['product_description'] ?></textarea>
                             </div>
                         </div>
 
@@ -258,7 +112,7 @@
                             <input type="file" name="image" onchange="preview_thumbail(this);">
                         </div>
                         <div class="preview_image">
-                            <img id="preview_img" src="./uploads/<?php echo $result_product['image'] ?>" alt="Ảnh bìa">
+                            <img id="preview_img" src="./uploads/<?php echo $result_product['product_image'] ?>" alt="Ảnh bìa">
                         </div>
                     </div>
                     <!-- Ảnh nội dung 1 -->
@@ -266,10 +120,10 @@
                         <div class="upload_file">
                             <label for="id_image" class="form-label">Ảnh mô tả 1</label>
                             <br>
-                            <input type="file" name="img_1" onchange="preview_image_1(this);">
+                            <input type="file" name="img_2" onchange="preview_image_1(this);">
                         </div>
                         <div class="preview_image">
-                            <img id="preview_1" src="./uploads/<?php echo $result_product['img_1'] ?>" alt="Ảnh mô tả 1">
+                            <img id="preview_1" src="./uploads/<?php echo $result_product['photo_2'] ?>" alt="Ảnh mô tả 1">
                         </div>
                     </div>
                     <!-- Ảnh nội dung 2 -->
@@ -277,10 +131,10 @@
                         <div class="upload_file">
                             <label for="id_image" class="form-label">Ảnh mô tả 2</label>
                             <br>
-                            <input type="file" name="img_2" onchange="preview_image_2(this);">
+                            <input type="file" name="img_3" onchange="preview_image_2(this);">
                         </div>
                         <div class="preview_image">
-                            <img id="preview_2" src="./uploads/<?php echo $result_product['img_2'] ?>" alt="Ảnh mô tả 2">
+                            <img id="preview_2" src="./uploads/<?php echo $result_product['photo_3'] ?>" alt="Ảnh mô tả 2">
                         </div>
                     </div>
                     <!-- Ảnh nội dung 3 -->
@@ -288,10 +142,10 @@
                         <div class="upload_file">
                             <label for="id_image" class="form-label">Ảnh mô tả 3</label>
                             <br>
-                            <input type="file" name="img_3" onchange="preview_image_3(this);">
+                            <input type="file" name="img_4" onchange="preview_image_3(this);">
                         </div>
                         <div class="preview_image">
-                            <img id="preview_3" src="./uploads/<?php echo $result_product['img_3'] ?>" alt="Ảnh mô tả 3">
+                            <img id="preview_3" src="./uploads/<?php echo $result_product['photo_4'] ?>" alt="Ảnh mô tả 3">
                         </div>
                     </div>
                     <!-- Ảnh nội dung 4 -->
@@ -299,10 +153,10 @@
                         <div class="upload_file">
                             <label for="id_image" class="form-label">Ảnh mô tả 4</label>
                             <br>
-                            <input type="file" name="img_4" onchange="preview_image_4(this);">
+                            <input type="file" name="img_5" onchange="preview_image_4(this);">
                         </div>
                         <div class="preview_image">
-                            <img id="preview_4" src="./uploads/<?php echo $result_product['img_4'] ?>" alt="Ảnh mô tả 4">
+                            <img id="preview_4" src="./uploads/<?php echo $result_product['photo_5'] ?>" alt="Ảnh mô tả 4">
                         </div>
                     </div>
                     <!-- Ảnh nội dung 5 -->
@@ -310,21 +164,10 @@
                         <div class="upload_file">
                             <label for="id_image" class="form-label">Ảnh mô tả 5</label>
                             <br>
-                            <input type="file" name="img_5" onchange="preview_image_5(this);">
+                            <input type="file" name="img_6" onchange="preview_image_5(this);">
                         </div>
                         <div class="preview_image">
-                            <img id="preview_5" src="./uploads/<?php echo $result_product['img_5'] ?>" alt="Ảnh mô tả 5">
-                        </div>
-                    </div>
-                    <!-- Ảnh nội dung 6 -->
-                    <div class="input_image">
-                        <div class="upload_file">
-                            <label for="id_image" class="form-label">Ảnh mô tả 6</label>
-                            <br>
-                            <input type="file" name="img_6" onchange="preview_image_6(this);">
-                        </div>
-                        <div class="preview_image">
-                            <img id="preview_6" src="./uploads/<?php echo $result_product['img_6'] ?>" alt="Ảnh mô tả 6">
+                            <img id="preview_5" src="./uploads/<?php echo $result_product['photo_6'] ?>" alt="Ảnh mô tả 5">
                         </div>
                     </div>
                     <input class="w-25 btn btn-primary btn" value="Sửa sản phẩm" type="submit" style="margin-top:50px;"></input>

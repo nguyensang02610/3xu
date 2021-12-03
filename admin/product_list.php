@@ -26,12 +26,8 @@ else
 
 <!-- Begin Page Content -->
 <div class="container-fluid">
-    <!-- Page Heading -->
-    <!-- <h1 class="h3 mb-2 text-gray-800">Tables</h1>
-    <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
-        For more information about DataTables, please visit the <a target="_blank" href="https://datatables.net">official DataTables documentation</a>.</p> -->
 
-    <!-- DataTales Example -->
+    <a href="product_add.php"><button type="button" class="btn btn-outline-success" style="margin-bottom : 20px"><i class="bi bi-plus-lg"></i>&nbsp Thêm mới sản phẩm</button></a>
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Danh sách sản phẩm</h6>
@@ -53,8 +49,7 @@ else
                         <tr>
                             <th style="width:10%">ID Sản phẩm</th>
                             <th style="width:35%">Tên sản phẩm</th>
-                            <th>Giá gốc</th>
-                            <th>Giá khuyến mãi</th>
+                            <th>Giá sản phẩm</th>
                             <th>Tồn kho</th>
                             <th>Ảnh sản phẩm</th>
                             <th>Ngày tạo</th>
@@ -65,8 +60,7 @@ else
                         <tr>
                             <th>ID Sản phẩm</th>
                             <th>Tên sản phẩm</th>
-                            <th>Giá gốc</th>
-                            <th>Giá khuyến mãi</th>
+                            <th>Giá sản phẩm</th>
                             <th>Tồn kho</th>
                             <th>Ảnh sản phẩm</th>
                             <th>Ngày tạo</th>
@@ -79,15 +73,13 @@ else
                         $i = 0;
                         if ($pdlist) {
                             while ($result = $pdlist->fetch_assoc()) {
-                                $i++;
                         ?>
                                 <tr>
                                     <td><?php echo $result['product_id']; ?></td>
-                                    <td><?php echo $result['tensp_shortcut']; ?></td>
-                                    <td><?php echo $fm->currency_format($result['price']); ?></td>
-                                    <td><?php echo $fm->currency_format($result['price_discount']); ?></td>
-                                    <td><?php echo $result['sl_nhap']; ?></td>
-                                    <td><img class="image_product" src="./uploads/<?php echo $result['image'];?>"></td>
+                                    <td><?php echo $result['product_name']; ?></td>
+                                    <td><?php echo $fm->currency_format($result['product_price']); ?></td>  
+                                    <td><?php echo $result['product_quantity']; ?></td>
+                                    <td><img class="image_product" src="./uploads/<?php echo $result['product_image'];?>"></td>
                                     <td><?php echo $result['time_created']; ?></td>
                                     <td style="text-align: center;">
                                         <a href="?product_id=<?php echo $result['product_id'] ?>">

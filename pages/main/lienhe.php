@@ -9,7 +9,7 @@
 <div class="container animated fadeIn">
 
   <div class="row">
-    <h1 class="header-title"> LIÊN HỆ </h1>
+    <h1 class="header-title" style="font-weight:lighter;color: #FF5403;margin-top: 20px;"> LIÊN HỆ </h1>
     <hr>
     <div class="col-sm-12" id="parent">
     	<div class="col-sm-6">
@@ -51,7 +51,7 @@
 					<div class="info">
 						<h3 class="title">EMAIL</h3>
 						<p>
-							<i class="fa fa-envelope" aria-hidden="true"></i> &nbsp nguyetntm29@gmail.com
+							<i class="fa fa-envelope" aria-hidden="true"></i> &nbsp hnhstore@gmail.com
 							<br>
 							<br>
 							

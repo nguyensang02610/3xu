@@ -5,6 +5,7 @@
 		<div class="slider">
 			<img src="./img/banner/x1.jpg">
 			<img src="./img/banner/x2.jpg">
+			<img src="./img/banner/x4.jpg">
 			
 		</div>
 

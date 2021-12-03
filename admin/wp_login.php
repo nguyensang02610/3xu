@@ -81,14 +81,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
                                             value="ĐĂNG NHẬP">
                                         <hr>
                                         <div class="btn btn-google btn-user btn-block">
-                                           <p> Đăng nhập với Gmail</p>
+                                           Đăng nhập với Gmail
                                         </div>
                                         <div class="btn btn-facebook btn-user btn-block">
-                                           <p> Đăng nhập  với Facebook</p>
-                                           HNH
-                                        </div>
-                                        <div class="btn btn-facebook btn-user btn-block">
-                                            D14HTTMDT1
+                                           Đăng nhập  với Facebook
                                         </div>
                                     </form>
                                     <hr>

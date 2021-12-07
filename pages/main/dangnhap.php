@@ -37,7 +37,7 @@
                     <input type="password" name="matkhau" id="typePasswordX" class="form-control form-control-lg" />
                   </div>
 
-                  <button class="btn btn-primary btn-lg btn-block" name="dangnhap" type="submit" style="background-color: #fc8270;">Đăng nhập</button>
+                  <button class="btn btn-primary btn-lg btn-block" name="dangnhap" type="submit" style="background-color: #ff5403;border-radius:25px">Đăng nhập</button>
       
                 </div>
                 </form>

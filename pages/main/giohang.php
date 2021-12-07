@@ -64,7 +64,7 @@
       <?php
         }else{
       ?>
-        <p style="text-decoration:underline"><a href="index.php?quanly=dangky">Đăng ký đặt hàng</a></p>
+        <a href="index.php?quanly=dangky"><input type="submit" name="dangkydathang" value="Đăng ký đặt hàng" style="border:none;border-radius:25px;background-color:#FF5403;color:white"></a></input>
       <?php
         }
       ?>

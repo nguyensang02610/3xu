@@ -46,7 +46,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript" src="./js/app.js"></script>
     <script type="text/javascript" src="./js/detail.js"></script>
-    <!-- Huyền gà vcđ -->
+    <!-- địt con mẹ ối bạn ơi-->
 </body>
 
 </html>

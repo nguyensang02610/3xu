@@ -25,7 +25,7 @@
 <div class="wrapper">
 	<?php 
           session_start();
-          include("admincp/config/config.php");
+          include("config/config.php");
           include("pages/menu.php");
           include("pages/header.php");
           include("pages/main.php");
@@ -47,7 +47,6 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript" src="./js/app.js"></script>
     <script type="text/javascript" src="./js/detail.js"></script>
-    <!-- địt con mẹ ối bạn ơi-->
 </body>
 
 </html>

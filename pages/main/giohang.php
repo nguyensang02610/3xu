@@ -33,11 +33,9 @@
       $i++;
   ?>
   <tr>
-   <td><img src="admincp/modules/quanlysanpham/uploads/<?php echo $cart_item['hinhanh']; ?>" width="150px"></td>
+   <td><img src="admin/uploads/<?php echo $cart_item['product_image']; ?>" width="150px"></td>
     <td><?php echo $i; ?></td>
-    <!-- <td><?php echo $cart_item['masp']; ?></td> -->
     <td><?php echo $cart_item['tensanpham']; ?></td>
-    <!-- <td><img src="admincp/modules/quanlysanpham/uploads/<?php echo $cart_item['hinhanh']; ?>" width="150px"></td> -->
     <td>
       <a href="pages/main/themgiohang.php?cong=<?php echo $cart_item['id'] ?>"><i class="fa fa-plus fa-style" aria-hidden="true"></i></a>
       <?php echo $cart_item['soluong']; ?>

@@ -1,6 +1,6 @@
 <p style="text-align: left; font-family: serif; font-size:35px; font-weight:bold;"><img src="./img/HNH.png" style="margin-left: 10px;width: 60px"> | Chi tiết sản phẩm</p>
 <?php
-  $sql_chitiet = "SELECT * FROM tbl_sanpham,tbl_danhmuc WHERE tbl_sanpham.id_danhmuc= tbl_danhmuc.id_danhmuc AND tbl_sanpham.id_sanpham ='$_GET[id]' LIMIT 1";
+  $sql_chitiet = "SELECT * FROM product  WHERE product_id ='$_GET[id]'";
   $query_chitiet = mysqli_query($mysqli,$sql_chitiet);  
   while($row_chitiet = mysqli_fetch_array($query_chitiet)){
 ?>
@@ -8,16 +8,28 @@
 	
 	<div class="page-product-body">
         <div class="page-product-body-left">
-            <img src="admincp/modules/quanlysanpham/uploads/<?php echo $row_chitiet['hinhanh']?>" alt=""
+            <img src="admin/uploads/<?php echo $row_chitiet['product_image']?>" alt=""
                 class="page-product-body-left-img">
-        </div>
-        <form method="POST" action="pages/main/themgiohang.php?idsanpham=<?php echo $row_chitiet['id_sanpham']?>">    
+                <div id="slider">
+                    <ul id="slideWrap"> 
+                    <li><img src="admin/uploads/<?php echo $row_chitiet['photo_2']?>" alt=""></li>
+                    <li><img src="admin/uploads/<?php echo $row_chitiet['photo_3']?>" alt=""></li>
+                    <li><img src="admin/uploads/<?php echo $row_chitiet['photo_4']?>" alt=""></li>
+                    <li><img src="admin/uploads/<?php echo $row_chitiet['photo_5']?>" alt=""></li>
+                    <li><img src="admin/uploads/<?php echo $row_chitiet['photo_6']?>" alt=""></li>
+                    </ul>
+                    <a id="prev" href="#"><i class="bi bi-chevron-left"></i></a>
+                    <a id="next" href="#"><i class="bi bi-chevron-right"></i></a>
+                </div>
+            
+                        </div>
+        <form method="POST" action="pages/main/themgiohang.php?idsanpham=<?php echo $row_chitiet['product_id']?>">    
             <div class="page-product-body-right">
                 <h2 class="page-product-body-right-title">
-                   <?php echo $row_chitiet['tensanpham']?>
+                   <?php echo $row_chitiet['product_name']?>
                 </h2>
                 <p class="page-product-body-right-cate">
-                    <?php echo $row_chitiet['tendanhmuc']?>
+                    <?php echo $row_chitiet['product_gr']?>
                 </p>
                 <div class="page-product-body-right-star">
                     <i class="fa-solid fa-star"></i>
@@ -27,7 +39,7 @@
                     <i class="fa-solid fa-star"></i>
                 </div>
                 <p class="page-product-body-right-price">
-                    Giá: <?php echo number_format($row_chitiet['giasp'],0,'.','.')." vnđ" ?>
+                    Giá: <?php echo number_format($row_chitiet['product_price'],0,'.','.')." vnđ" ?>
                 </p>
                
                 <input type="submit" name="themgiohang" value=" +Thêm Giỏ Hàng" class="page-product-body-right-cart">

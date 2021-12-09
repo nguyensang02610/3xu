@@ -222,14 +222,14 @@ class product //Lớp sản phẩm
 	//function show sản phẩm
 	public function show_product()
 	{
-		$query = "select * from tbl_product";
+		$query = "select * from product";
 		$result = $this->db->select($query);
 		return $result;
 	}
 
 	public function show_product_bybrand($brand)
 	{
-		$query = "select * from tbl_product where tensp like '%$brand%'";
+		$query = "select * from product where product_gr like '%$brand%'";
 		$result = $this->db->select($query);
 		return $result;
 	}

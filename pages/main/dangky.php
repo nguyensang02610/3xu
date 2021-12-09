@@ -14,7 +14,7 @@
 		}
 	}
 ?>
-<section class="vh-100 bg-image" style="background-color: white; margin-top: 10px;">
+<section class="vh-100 bg-image" style="background-color: white; margin-top: 10px;margin-bottom: 100px;">
         <div class="mask d-flex align-items-center h-100 gradient-custom-3">
           <div class="container h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">

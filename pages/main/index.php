@@ -1,9 +1,16 @@
 <?php
+  include "class/brand.php";
+?>
+<?php
+    $pd = new brand();
+?>
+
+<!-- <?php
 	
-	$sql_pro = "SELECT * FROM tbl_sanpham,tbl_danhmuc WHERE tbl_sanpham.id_danhmuc=tbl_danhmuc.id_danhmuc ORDER BY tbl_sanpham.id_sanpham DESC ";
+	$sql_pro = "SELECT * FROM product WHERE product_id";
 	$query_pro = mysqli_query($mysqli,$sql_pro);
 	
-?>
+?> -->
 <div class="space" style="margin-top: 25px;">
     		<p style="text-align: center;font-size: 30px;font-family: sans-serif;font-weight: lighter;color: #FF5403;"> SẢN PHẨM NỔI BẬT NHẤT</p>
 </div>
@@ -12,12 +19,12 @@
     while($row= mysqli_fetch_array($query_pro)){
     ?>
 		<li>
-			<a href="index.php?quanly=sanpham&id=<?php echo $row['id_sanpham']?>">
-			  <img class="pro_img" src="admincp/modules/quanlysanpham/uploads/<?php echo $row['hinhanh'] ?>">
+			<a href="index.php?quanly=sanpham&id=<?php echo $row['product_id']?>">
+			  <img class="pro_img" src="admin/uploads/<?php echo $row['product_image'] ?>">
 			  <div>
-			  <p class="title_product"><?php echo $row['tensanpham'] ?></p>
-				<p class="price_product"><?php echo number_format( $row['giasp'],0,',','.').'vnđ'?> </p>
-			  <p style="text-align: center; color: gray;"><?php echo $row['tendanhmuc'] ?></p> 
+			  <p class="title_product"><?php echo $row['product_name'] ?></p>
+				<p class="price_product"><?php echo number_format( $row['product_price'],0,',','.').'vnđ'?> </p>
+			  <p style="text-align: center; color: gray;"><?php echo $row['product_gr'] ?></p> 
 			  </div>
 				
 			 </a>

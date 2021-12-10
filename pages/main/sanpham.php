@@ -9,7 +9,7 @@
 	<div class="page-product-body">
         <div class="page-product-body-left">
             <img src="admin/uploads/<?php echo $row_chitiet['product_image']?>" alt="" class="page-product-body-left-img">
-            <div class="page-product-body-bottom" style="">
+            <div class="page-product-body-bottom">
                 <div id="slider">
                     <ul id="slideWrap"> 
                     <li><img src="admin/uploads/<?php echo $row_chitiet['photo_2']?>" alt="" ></li>

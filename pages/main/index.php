@@ -5,12 +5,12 @@
     $pd = new brand();
 ?>
 
-<!-- <?php
+ <?php
 	
 	$sql_pro = "SELECT * FROM product WHERE product_id";
 	$query_pro = mysqli_query($mysqli,$sql_pro);
 	
-?> -->
+?> 
 <div class="space" style="margin-top: 25px;">
     		<p style="text-align: center;font-size: 30px;font-family: sans-serif;font-weight: lighter;color: #FF5403;"> SẢN PHẨM NỔI BẬT NHẤT</p>
 </div>

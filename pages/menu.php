@@ -1,6 +1,6 @@
 <?php
  $sql_danhmuc = "SELECT * FROM tbl_danhmuc WHERE id_danhmuc ";
-//  $query_danhmuc = mysqli_query($mysqli,$sql_danhmuc);
+ $query_danhmuc = mysqli_query($mysqli,$sql_danhmuc);
 ?>
 <?php
    if(isset($_GET['dangxuat'])&&$_GET['dangxuat']==1){

@@ -25,7 +25,7 @@
 <div class="wrapper">
 	<?php 
           session_start();
-          include("config/config.php");
+          include("admincp/config/config.php");
           include("pages/menu.php");
           include("pages/header.php");
           include("pages/main.php");

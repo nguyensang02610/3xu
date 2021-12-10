@@ -8,21 +8,21 @@
 	
 	<div class="page-product-body">
         <div class="page-product-body-left">
-            <img src="admin/uploads/<?php echo $row_chitiet['product_image']?>" alt=""
-                class="page-product-body-left-img">
+            <img src="admin/uploads/<?php echo $row_chitiet['product_image']?>" alt="" class="page-product-body-left-img">
+            <div class="page-product-body-bottom" style="">
                 <div id="slider">
                     <ul id="slideWrap"> 
-                    <li><img src="admin/uploads/<?php echo $row_chitiet['photo_2']?>" alt=""></li>
-                    <li><img src="admin/uploads/<?php echo $row_chitiet['photo_3']?>" alt=""></li>
-                    <li><img src="admin/uploads/<?php echo $row_chitiet['photo_4']?>" alt=""></li>
-                    <li><img src="admin/uploads/<?php echo $row_chitiet['photo_5']?>" alt=""></li>
-                    <li><img src="admin/uploads/<?php echo $row_chitiet['photo_6']?>" alt=""></li>
+                    <li><img src="admin/uploads/<?php echo $row_chitiet['photo_2']?>" alt="" ></li>
+                    <li><img src="admin/uploads/<?php echo $row_chitiet['photo_3']?>" alt="" ></li>
+                    <li><img src="admin/uploads/<?php echo $row_chitiet['photo_4']?>" alt="" ></li>
+                    <li><img src="admin/uploads/<?php echo $row_chitiet['photo_5']?>" alt="" ></li>
+                    <li><img src="admin/uploads/<?php echo $row_chitiet['photo_6']?>" alt="" ></li>
                     </ul>
                     <a id="prev" href="#"><i class="bi bi-chevron-left"></i></a>
                     <a id="next" href="#"><i class="bi bi-chevron-right"></i></a>
                 </div>
-            
-                        </div>
+             </div>  
+            </div>
         <form method="POST" action="pages/main/themgiohang.php?idsanpham=<?php echo $row_chitiet['product_id']?>">    
             <div class="page-product-body-right">
                 <h2 class="page-product-body-right-title">

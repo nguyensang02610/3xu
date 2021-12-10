@@ -31,7 +31,7 @@
 			$image = $result['image'];
 			if($result['tonkho']>$quantity){
 			
-				$query_insert = "INSERT INTO tbl_cart(productId,productName,quantity,sId,productPrice,image) VALUES('$id','$productName','$quantity','$sId','$price','$image' ) ";
+				$query_insert = "INSERT INTO tbl_cart(product_id,product_name,product_quantity,sId,product_price,product_image) VALUES('$id','$productName','$quantity','$sId','$price','$image' ) ";
 				$insert_cart = $this->db->insert($query_insert);
 				if($result){
 					echo "<script> window.location = 'cart.php' </script>";
@@ -65,7 +65,7 @@
             {
 				$query = "UPDATE tbl_cart SET
 
-			   quantity = '$quantity'
+				quantity = '$quantity'
 				WHERE cartId = '$cartId'";
 
 				$result = $this->db->update($query);

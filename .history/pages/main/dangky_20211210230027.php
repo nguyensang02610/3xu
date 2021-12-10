@@ -27,10 +27,7 @@
                     <form action="" method="POST" style="margin-top:5px;">
       
                       <div class="form-outline mb-4">
-                        <input type="text" style="margin-top:10px; font-size:20px" name="ho" id="form3Example1cg" class="form-control form-control-lg" placeholder="Họ " />
-                      </div>
-                      <div class="form-outline mb-4">
-                        <input type="text" style="margin-top:10px; font-size:20px" name="ten" id="form3Example1cg" class="form-control form-control-lg" placeholder="tên" />
+                        <input type="text" style="margin-top:10px; font-size:20px" name="hovaten" id="form3Example1cg" class="form-control form-control-lg" placeholder="Họ và tên" />
                       </div>
       
                       <div class="form-outline mb-4">
@@ -38,7 +35,7 @@
                       </div>
       
                       <div class="form-outline mb-4">
-                        <input type="text" style="margin-top:10px; font-size:20px" name="phone" id="form3Example4cg" class="form-control form-control-lg" placeholder="Số điện thoại" />
+                        <input type="text" style="margin-top:10px; font-size:20px" name="sdt" id="form3Example4cg" class="form-control form-control-lg" placeholder="Số điện thoại" />
                       </div>
       
                       <div class="form-outline mb-4">
@@ -46,7 +43,7 @@
                       </div>
       
                       <div class="form-outline mb-4">
-                        <input type="text" style="margin-top:10px; font-size:20px"name="password" id="form3Example4cdg" class="form-control form-control-lg" placeholder="Mật khẩu" />
+                        <input type="text" style="margin-top:10px; font-size:20px"name="matkhau" id="form3Example4cdg" class="form-control form-control-lg" placeholder="Mật khẩu" />
                       </div>
       
                       <div class="d-flex justify-content-center">

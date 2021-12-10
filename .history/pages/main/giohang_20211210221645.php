@@ -1,9 +1,3 @@
-<?php
-  include "class/cart.php";
-?>
-<?php
-    $pd = new cart();
-?>
 <p style="text-align: left; font-family: serif; font-size:35px; font-weight:bold;"><img src="./img/HNH.png" style="margin-left: 10px;width: 60px"> | Giỏ hàng</p>
 <p>
   <?php
@@ -44,7 +38,7 @@
     <td><?php echo $cart_item['product_name']; ?></td>
     <td>
       <a href="pages/main/themgiohang.php?cong=<?php echo $cart_item['id'] ?>"><i class="fa fa-plus fa-style" aria-hidden="true"></i></a>
-      <?php echo $cart_item['product_quantity']; ?>
+      <?php echo $cart_item['quantity']; ?>
       <a href="pages/main/themgiohang.php?tru=<?php echo $cart_item['id'] ?>"><i class="fa fa-minus fa-style" aria-hidden="true"></i></a>
 
     </td>

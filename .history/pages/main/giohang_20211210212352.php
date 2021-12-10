@@ -1,9 +1,3 @@
-<?php
-  include "class/cart.php";
-?>
-<?php
-    $pd = new cart();
-?>
 <p style="text-align: left; font-family: serif; font-size:35px; font-weight:bold;"><img src="./img/HNH.png" style="margin-left: 10px;width: 60px"> | Giỏ hàng</p>
 <p>
   <?php
@@ -34,21 +28,21 @@
     $i = 0;
     $tongtien = 0;
     foreach($_SESSION['cart'] as $cart_item){
-      $thanhtien = $cart_item['product_quantity']*$cart_item['product_price'];
+      $thanhtien = $cart_item['soluong']*$cart_item['giasp'];
       $tongtien+=$thanhtien;
       $i++;
   ?>
   <tr>
    <td><img src="admin/uploads/<?php echo $cart_item['product_image']; ?>" width="150px"></td>
     <td><?php echo $i; ?></td>
-    <td><?php echo $cart_item['product_name']; ?></td>
+    <td><?php echo $cart_item['tensanpham']; ?></td>
     <td>
       <a href="pages/main/themgiohang.php?cong=<?php echo $cart_item['id'] ?>"><i class="fa fa-plus fa-style" aria-hidden="true"></i></a>
-      <?php echo $cart_item['product_quantity']; ?>
+      <?php echo $cart_item['soluong']; ?>
       <a href="pages/main/themgiohang.php?tru=<?php echo $cart_item['id'] ?>"><i class="fa fa-minus fa-style" aria-hidden="true"></i></a>
 
     </td>
-    <td><?php echo number_format($cart_item['product_price'],0,',','.').'vnđ'; ?></td>
+    <td><?php echo number_format($cart_item['giasp'],0,',','.').'vnđ'; ?></td>
     <td><?php echo number_format($thanhtien,0,',','.').'vnđ' ?></td>
     <td><a href="pages/main/themgiohang.php?xoa=<?php echo $cart_item['id'] ?>">Xoá</a></td>
   </tr>

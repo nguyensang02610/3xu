@@ -1,6 +1,6 @@
 <?php
   session_start();
-	include('../config/config.php');
+	include('../../admincp/config/config.php');
 	//them so luong
 	if(isset($_GET['cong'])){
 		$id=$_GET['cong'];

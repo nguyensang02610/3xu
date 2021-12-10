@@ -1,9 +1,3 @@
-<?php
-  include "class/cart.php";
-?>
-<?php
-    $pd = new cart();
-?>
 <p style="text-align: left; font-family: serif; font-size:35px; font-weight:bold;"><img src="./img/HNH.png" style="margin-left: 10px;width: 60px"> | Giỏ hàng</p>
 <p>
   <?php

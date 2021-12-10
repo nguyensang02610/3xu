@@ -23,15 +23,15 @@
 		{
 			$sId = session_id();
 			
-			$query = "SELECT * FROM product WHERE product_id = '$id' ";
+			$query = "SELECT * FROM tbl_product WHERE product_id = '$id' ";
 			$result = $this->db->select($query)->fetch_assoc();
 
-			$productName = $result['product_name'];
+			$productName = $result['tensp'];
 			$price = $result['price_discount'];
 			$image = $result['image'];
 			if($result['tonkho']>$quantity){
 			
-				$query_insert = "INSERT INTO tbl_cart(productId,productName,quantity,sId,productPrice,image) VALUES('$id','$productName','$quantity','$sId','$price','$image' ) ";
+				$query_insert = "INSERT INTO tbl_cart(productId,productName,quantity,sId,price,image) VALUES('$id','$productName','$quantity','$sId','$price','$image' ) ";
 				$insert_cart = $this->db->insert($query_insert);
 				if($result){
 					echo "<script> window.location = 'cart.php' </script>";
@@ -58,14 +58,14 @@
 			$cartId = mysqli_real_escape_string($this->db->link, $cartId);
 			$proId = mysqli_real_escape_string($this->db->link, $proId);
 
-			$query_product = "SELECT * FROM product WHERE product_id = '$proId' ";
+			$query_product = "SELECT * FROM tbl_product WHERE product_id = '$proId' ";
 			$result_product = $this->db->select($query_product)->fetch_assoc();
 
 			if($quantity<$result_product['tonkho'])
             {
 				$query = "UPDATE tbl_cart SET
 
-			   quantity = '$quantity'
+				quantity = '$quantity'
 				WHERE cartId = '$cartId'";
 
 				$result = $this->db->update($query);

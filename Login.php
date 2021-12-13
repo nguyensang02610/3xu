@@ -1,15 +1,19 @@
 <?php
+session_start();
+include "admincp/config/config.php";
+?>
+<?php
 	if(isset($_POST['dangnhap'])){
 		$email = $_POST['email'];
 		$matkhau = md5($_POST['matkhau']);
-		$sql = "SELECT * FROM tbl_dangky WHERE email='".$email."' AND matkhau='".$matkhau."' LIMIT 1";
+		$sql = "SELECT * FROM tbl_dangky WHERE email='".$email."' AND password='".$matkhau."' LIMIT 1";
 		$row = mysqli_query($mysqli,$sql);
 		$count = mysqli_num_rows($row);
 
 		if($count>0){
 			$row_data = mysqli_fetch_array($row);
 			$_SESSION['dangky'] = $row_data['tenkhachhang'];
-			$_SESSION['id_khachhang'] = $row_data['id_dangky'];
+			$_SESSION['id_kh'] = $row_data['id_dangky'];
 			header("Location:index.php?quanly=giohang");
 		}else{
 			echo '<p style="color:red">Mật khẩu hoặc Email sai ,vui lòng nhập lại.</p>';
@@ -17,6 +21,17 @@
 		}
 	} 
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Login</title>
+</head>
+<body>
 <section class="vh-80" style="background-color: white;">
         <div class="container py-5 h-80">
           <div class="row d-flex justify-content-center align-items-center h-80">
@@ -46,3 +61,8 @@
           </div>
         </div>
 </section>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</html>

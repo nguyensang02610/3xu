@@ -31,7 +31,7 @@
     }
     elseif($tam=='dangky')
     {
-        include("main/dangky.php");
+        include("register.php");
     }
     elseif($tam=='thanhtoan')
     {
@@ -39,7 +39,7 @@
     }
     elseif($tam=='dangnhap')
     {
-        include("main/dangnhap.php");
+        include("Login.php");
     }
     elseif($tam=='timkiem')
     {

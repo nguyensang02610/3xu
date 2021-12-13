@@ -15,7 +15,7 @@
 <div class="space" style="margin-top: 25px;">
     		<p style="text-align: center;font-size: 30px;font-family: sans-serif;font-weight: lighter;color: #FF5403;"> SẢN PHẨM NỔI BẬT NHẤT</p>
 </div>
-	<ul class="product_list">
+	<ul class="product_list" >
 		<?php
     while($row= mysqli_fetch_array($query_pro)){
     ?>

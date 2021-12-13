@@ -1,6 +1,6 @@
 <?php
   session_start();
-	include('../config/config.php');
+	include('../../admincp/config/config.php');
 	//them so luong
 	if(isset($_GET['cong'])){
 		$id=$_GET['cong'];
@@ -64,7 +64,7 @@
 	//them sanpham vao gio hang
 	if(isset($_POST['themgiohang'])){
 		//session_destroy();
-		$id=$_GET['product_id'];
+		$id=$_GET['id'];
 		$soluong=1; 
 		$sql ="SELECT * FROM product WHERE product_id ='".$id."' LIMIT 1";
 		$query = mysqli_query($mysqli,$sql);

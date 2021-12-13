@@ -57,7 +57,7 @@
       } else {
       ?>
          <li class="nav-item active">
-            <a class="nav-link text-white" href="index.php?quanly=dangky" style="margin-bottom:4px"><i class="fas fa-user"></i> Đăng ký</a>
+            <a class="nav-link text-white" href="register.php" style="margin-bottom:4px"><i class="fas fa-user"></i> Đăng ký</a>
          </li>
       <?php
       }

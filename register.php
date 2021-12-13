@@ -1,3 +1,9 @@
+
+<?php
+session_start();
+  include "admincp/config/config.php";
+  
+?>
 <?php 
 	if(isset($_POST['dangky'])) {
 		$tenkhachhang = $_POST['ten'];
@@ -6,7 +12,7 @@
 		$sdt = $_POST['phone'];
 		$matkhau = md5($_POST['password']);
 		$diachi = $_POST['diachi'];
-		$sql_dangky = mysqli_query($mysqli,"INSERT INTO tbl_dangky(ho,ten,email,diachi,password,phone) VALUE('".$tenkhachhang."','".$tenkhachhang."','".$email."','".$diachi."','".$matkhau."','".$sdt."')");
+		$sql_dangky = mysqli_query($mysqli,"INSERT INTO tbl_dangky(ho,ten,email,diachi,password,phone) VALUE('".$hokhachhang."','".$tenkhachhang."','".$email."','".$diachi."','".$matkhau."','".$sdt."')");
 		if($sql_dangky){
 			echo '<p style="color:green">Bạn đã đăng ký thành công</p>';
 			$_SESSION['dangky'] = $tenkhachhang;
@@ -15,6 +21,17 @@
 		}
 	}
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Register</title>
+</head>
+<body>
 <section class="vh-100 bg-image" style="background-color: white; margin-top: 10px;margin-bottom: 100px;">
         <div class="mask d-flex align-items-center h-100 gradient-custom-3">
           <div class="container h-100">
@@ -30,7 +47,7 @@
                         <input type="text" style="margin-top:10px; font-size:20px" name="ho" id="form3Example1cg" class="form-control form-control-lg" placeholder="Họ " />
                       </div>
                       <div class="form-outline mb-4">
-                        <input type="text" style="margin-top:10px; font-size:20px" name="ten" id="form3Example1cg" class="form-control form-control-lg" placeholder="tên" />
+                        <input type="text" style="margin-top:10px; font-size:20px" name="ten" id="form3Example1cg" class="form-control form-control-lg" placeholder="Tên" />
                       </div>
       
                       <div class="form-outline mb-4">
@@ -53,7 +70,7 @@
                         <button type="submit" style="margin-top:10px; font-size:20px;background-color: #ff5403;border-radius:25px" name="dangky" class="btn btn-primary btn-lg btn-block">Đăng Ký</button>
                       </div>
       
-                      <p class="text-center text-muted mt-5 mb-0">Bạn đã có tài khoản ? <a href="index.php?quanly=dangnhap" class="fw-bold text-body"><u>Đăng Nhập</u></a></p>
+                      <p class="text-center text-muted mt-5 mb-0">Bạn đã có tài khoản ? <a href="Login.php" class="fw-bold text-body"><u>Đăng Nhập</u></a></p>
       
                     </form>
       
@@ -64,3 +81,9 @@
           </div>
         </div>
       </section>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</html>      

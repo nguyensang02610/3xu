@@ -42,25 +42,6 @@ input.themgiohang{
 	font-size: 15px;
 	cursor: pointer ;
 }
-.hinhanh_sanpham {
-    float: left;
-    width: 30%;
-}
-.chitiet_sanpham {
-    float: left;
-    width: 69%;
-    margin-left: 10px;
-}
-
-.pic_pro {
-    float: left;
-    width: 30%;
-}
-.detail_pro {
-    float: left;
-    width: 69%;
-    margin-left: 10px;
-}
 /* Contact */
 
 	/* Contact start */

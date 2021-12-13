@@ -1,9 +1,4 @@
-<?php
-  include "class/cart.php";
-?>
-<?php
-    $pd = new cart();
-?>
+
 <p style="text-align: left; font-family: serif; font-size:35px; font-weight:bold;"><img src="./img/HNH.png" style="margin-left: 10px;width: 60px"> | Giỏ hàng</p>
 <p>
   <?php
@@ -68,7 +63,7 @@
       <?php
         }else{
       ?>
-        <a href="index.php?quanly=dangky"><input type="submit" name="dangkydathang" value="Đăng ký đặt hàng" style="border:none;border-radius:25px;background-color:#FF5403;color:white"></a></input>
+        <a href="register.php"><input type="submit" name="dangkydathang" value="Đăng ký đặt hàng" style="border:none;border-radius:25px;background-color:#FF5403;color:white"></a></input>
       <?php
         }
       ?>

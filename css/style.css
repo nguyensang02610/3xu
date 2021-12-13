@@ -171,14 +171,13 @@ input.themgiohang{
 	align-items: center;
 	background: #ffffff;
 }
-
 .slider{
-    height: 400px;
+    height: 500px;
     overflow: hidden;
 }
 .slider img{
-    width: 400px;
-    height: 400px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 #main {
@@ -213,9 +212,9 @@ p.title_product{
 	color: black;
 	font-size: 14px;
 	font-weight: bold;
-  position: absolute;
+  position:static;
   text-align: center;
-  margin-left: 25px;
+  /* margin-left: 25px; */
   
 }
 p.price_product{
@@ -223,7 +222,7 @@ p.price_product{
     color: red;
     font-size: 20px;
     font-weight: bold;
-    padding-top: 45px; 
+    padding-top: 20px; 
 } 
 	/* text-align: center;
 	font-size: 14px;
@@ -351,9 +350,6 @@ hr {
     margin-bottom: 500px;
     margin-left: 500px;
   }
-  /* .page-product-body-bottom ul{
-    margin-left: 200px;
-  } */
   
   .page-product-body form {
     width: 50%;
@@ -473,8 +469,8 @@ hr {
   /*----Slide Chi tiết sản phẩm------*/
   #slider {
     position: relative;
-    width: 450px;
-    height: 450px;
+    width: 600px;
+    height: 200px;
     overflow: hidden;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
     margin-top: 80px;
@@ -484,7 +480,7 @@ hr {
     position: relative;
     list-style: none;
     height: 100%;
-    width: 450px;
+    width: 850px;
     padding: 0;
     margin: 0;
     /* transition: all 750ms ease; */
@@ -496,9 +492,8 @@ hr {
 
   }
   #slider ul li img{
-    width: 450px;
-    width: 450px;
-    height: 600px;
+    width: 200px;
+    height: 200px;
   }
    
   #slider #prev, #slider #next {

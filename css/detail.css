@@ -1,0 +1,55 @@
+ /* ----Slide Chi tiết sản phẩm------
+ #slider {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(80, 72, 72, 0.3);
+    /* margin-top: 80px; 
+    margin: 5px 10px;
+
+    }
+  #slider ul {
+    position: relative;
+    list-style: none;
+    height: 100%;
+    width: 850px;
+    padding: 0;
+    margin: 0;
+    /* transition: all 750ms ease; 
+  }
+  #slider ul li {
+    position: relative;
+    height: 100%;
+    float: left;
+
+  }
+  #slider ul li img{
+    width: 200px;
+    height: 200px;
+  }
+   
+  #slider #prev, #slider #next {
+    width: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 2rem;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 150ms ease; 
+  }
+  #slider #prev:hover, #slider #next:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    text-shadow: 0;
+  }
+  #slider #prev {
+    left: 10px;
+  }
+  #slider #next {
+    right: 10px;
+  } */

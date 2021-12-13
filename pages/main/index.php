@@ -1,4 +1,5 @@
 <?php
+  include("pages/header.php");
   include "class/brand.php";
 ?>
 <?php

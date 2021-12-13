@@ -5,8 +5,8 @@
 <?php
     $pd = new product();
 ?>
-<div class="space" style="margin-top: 20px;">
-    		<p style="text-align: center;font-size: 30px;font-family: sans-serif;font-weight: bold;color: gray;"> SẢN PHẨM NỔI BẬT NHẤT</p>
+<!-- <div class="space" style="margin-top: 20px;">
+    		<p style="text-align: center;font-size: 30px;font-family: sans-serif;font-weight: bold;color: gray;position:static" <?php echo $row['product_gr']?>></p> -->
 </div>
         <!--dòng 1-->
 		<ul class="product_list">

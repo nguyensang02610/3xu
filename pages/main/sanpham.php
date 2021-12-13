@@ -8,19 +8,20 @@
 	
 	<div class="page-product-body">
         <div class="page-product-body-left">
-                <div id="slider">
+        <img src="admin/uploads/<?php echo $row_chitiet['product_image']?>" alt="" style="width:350px; height:400px;margin-bottom:300px;margin-right:260px">
+                <!-- <div id="slider">
+                     <a id="prev" href="#"><i class="bi bi-chevron-left" style="color: #ff5403;"></i></a> 
                     <ul id="slideWrap"> 
-                    <li><img src="admin/uploads/<?php echo $row_chitiet['product_image']?>" alt="" ></li>
                     <li><img src="admin/uploads/<?php echo $row_chitiet['photo_2']?>" alt="" ></li>
                     <li><img src="admin/uploads/<?php echo $row_chitiet['photo_3']?>" alt="" ></li>
                     <li><img src="admin/uploads/<?php echo $row_chitiet['photo_4']?>" alt="" ></li>
                     <li><img src="admin/uploads/<?php echo $row_chitiet['photo_5']?>" alt="" ></li>
                     <li><img src="admin/uploads/<?php echo $row_chitiet['photo_6']?>" alt="" ></li>
                     </ul>
-                    <a id="prev" href="#"><i class="bi bi-chevron-left"></i></a>
-                    <a id="next" href="#"><i class="bi bi-chevron-right"></i></a>
-                </div>
-        
+                    <a id="prev" href="#"><i class="bi bi-chevron-left"></i></a> 
+                     <a id="next" href="#"><i class="bi bi-chevron-right" style="color: #ff5403;margin-left:100px" ></i></a> 
+                </div> !-->
+          </div>
              </div>  
         <form method="POST" action="pages/main/themgiohang.php?idsanpham=<?php echo $row_chitiet['product_id']?>">    
             <div class="page-product-body-right">
@@ -67,8 +68,25 @@
                 </ul>
             </div>
         </form>
+        <!-- <div id="detail">
+              <div class="pro-img-list">
+                  <a href="#">
+                      <img src="https://via.placeholder.com/115x100/87CEFA/000000" alt="">
+                  </a>
+                  <a href="#">
+                      <img src="https://via.placeholder.com/115x100/FF7F50/000000" alt="">
+                  </a>
+                  <a href="#">
+                      <img src="https://via.placeholder.com/115x100/20B2AA/000000" alt="">
+                  </a>
+                  <a href="#">
+                      <img src="https://via.placeholder.com/120x100/20B2AA/000000" alt="">
+                  </a>
+              </div>
+                </div> -->
     </div>
 </div>
+
 <?php
 }
 ?>

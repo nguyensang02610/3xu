@@ -3,11 +3,11 @@
 
 <?php
 $nv = new nhanvien();
-if (isset($_GET['nhanvien_id']) and $_GET['nhanvien_id'] == NULL) {
+if (isset($_GET['id_nhanvien']) and $_GET['id_nhanvien'] == NULL) {
     //echo "<script> alert ('Ko nhận đc id sp') ;</script>";
     echo "<script> window.location = 'nhanvien.php' </script>";
 } else {
-    $id = $_GET['nhanvien_id']; // Lấy productid trên host  
+    $id = $_GET['id_nhanvien']; // Lấy productid trên host  
     //echo $id;
 }
 

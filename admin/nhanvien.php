@@ -8,8 +8,8 @@ $nv = new nhanvien();
 ?>
 <!-- Hàm xóa sản phẩm -->
 <?php
-if (isset($_GET['nhanvien_id']) AND $_GET['nhanvien_id'] != NULL) {
-    $id = $_GET['nhanvien_id'];
+if (isset($_GET['id_nhanvien']) AND $_GET['id_nhanvien'] != NULL) {
+    $id = $_GET['id_nhanvien'];
     $delete_nv  = $nv->delete_nhanvien($id);
     if (isset($delete_nv))
     {
@@ -77,7 +77,7 @@ if (isset($_GET['nhanvien_id']) AND $_GET['nhanvien_id'] != NULL) {
                             while ($result = $nhanvien_list->fetch_assoc()) {
                         ?>
                                 <tr>
-                                    <td>#<?php echo $result['id']; ?></td>
+                                    <td><?php echo $result['id_nhanvien']; ?></td>
                                     <td><?php echo $result['hoten']; ?></td>
                                     <td><?php echo $result['diachi']; ?></td>
                                     <td><?php echo $result['ngaysinh']; ?></td>
@@ -85,10 +85,10 @@ if (isset($_GET['nhanvien_id']) AND $_GET['nhanvien_id'] != NULL) {
                                     <td><img class="image_product" src="./uploads/nhanvien/<?php echo $result['image']; ?>"  ></td>
                                     <td><?php echo $result['phone']; ?></td>
                                     <td style="text-align: center;">
-                                        <a href="?nhanvien_id=<?php echo $result['id'] ?>">
+                                        <a href="?nhanvien_id=<?php echo $result['id_nhanvien'] ?>">
                                             <button class="btn_1"><i class="bi bi-x">Xóa</i></button>
                                         </a>
-                                        <a href="nhanvien_edit.php?nhanvien_id=<?php echo $result['id'] ?>">
+                                        <a href="nhanvien_edit.php?nhanvien_id=<?php echo $result['id_nhanvien'] ?>">
                                             <button class="btn_2"><i class="bi bi-pencil">Sửa</i></button>
                                         </a>
                                     </td>

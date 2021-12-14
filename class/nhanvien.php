@@ -28,14 +28,14 @@ class nhanvien
 
     public function getnv_byId($id)
     {
-        $query = "select * from tbl_nhanvien where id = '$id' ";
+        $query = "select * from tbl_nhanvien where id_nhanvien = '$id' ";
         $result = $this->db->select($query);
         return $result;
     }
 
     public function delete_nhanvien($id)
     {
-        $query = "DELETE FROM tbl_nhanvien where id = '$id'";
+        $query = "DELETE FROM tbl_nhanvien where id_nhanvien = '$id'";
         $result = $this->db->delete($query);
         if ($result) {
             $alert = "<script type='text/javascript'> alert ('Xóa nhân viên thành công');</script>";
@@ -126,11 +126,11 @@ class nhanvien
 					return $alert;
 				}
 				move_uploaded_file($file_1, $uploaded_image_1);//up anh 1
-				$query = "UPDATE tbl_nhanvien SET hoten = '$name', diachi = '$diachi' , ngaysinh = '$ngaysinh', chucvu = '$chucvu', quyen = '$quyen', phone = '$phone', password = '$password, image = '$anh_1' where id = '$id' ";
+				$query = "UPDATE tbl_nhanvien SET hoten = '$name', diachi = '$diachi' , ngaysinh = '$ngaysinh', chucvu = '$chucvu', quyen = '$quyen', phone = '$phone', password = '$password, image = '$anh_1' where id_nhanvien = '$id' ";
 			}
 			else
 			{
-				$query = "UPDATE tbl_nhanvien SET hoten = '$name', diachi = '$diachi' , ngaysinh = '$ngaysinh', chucvu = '$chucvu', quyen = '$quyen', phone = '$phone', password = '$password' where id = '$id' ";
+				$query = "UPDATE tbl_nhanvien SET hoten = '$name', diachi = '$diachi' , ngaysinh = '$ngaysinh', chucvu = '$chucvu', quyen = '$quyen', phone = '$phone', password = '$password' where id_nhanvien = '$id' ";
 			}
 			$result = $this->db->update($query);
 			if($result){

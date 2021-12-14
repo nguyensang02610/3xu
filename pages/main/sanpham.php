@@ -95,7 +95,7 @@
                 <div class="tab-pane-promotion">
                     <p>
                         <i class="tab-pane-promotion-icon fa-solid fa-1"></i>
-                        Giảm giá 800,000đ khi tham gia thu cũ đổi mới (Không áp dụng kèm giảm giá qua VNPay, Moca)
+                        Giảm giá 200000đ (Không áp dụng kèm giảm giá qua VNPay, Moca)
                     </p>
                     <p>
                         <i class="tab-pane-promotion-icon fa-solid fa-2"></i>
@@ -103,12 +103,11 @@
                     </p>
                     <p>
                         <i class="tab-pane-promotion-icon fa-solid fa-3"></i>
-                        Giảm 50% giá mua gói bảo hiểm rơi vỡ 6 tháng (trị giá đến 1,000,000đ)
+                        Giảm 50% giá  (trị giá đến 1,000,000đ)
                     </p>
                     <p>
                         <i class="tab-pane-promotion-icon fa-solid fa-4"></i>
-                        Giảm 50% giá gói cước 1 năm (Vina350/Vina500) cho Sim VinaPhone trả sau (Trị giá đến 3 triệu)
-                    </p>
+                        Giảm 50% giá gói 
                     <p>
                         <i class="tab-pane-promotion-icon fa-solid fa-5"></i>
                         Nhập mã TGDD12 giảm 5% tối đa 500.000đ cho hóa đơn từ 500.000đ khi thanh toán qua Ví Moca trên

@@ -14,7 +14,7 @@ include "admincp/config/config.php";
 			$row_data = mysqli_fetch_array($row);
 			$_SESSION['dangky'] = $row_data['tenkhachhang'];
 			$_SESSION['id_kh'] = $row_data['id_dangky'];
-			header("Location:index.php?quanly=giohang");
+			//header("Location:index.php?quanly=giohang");
 		}else{
 			echo '<p style="color:red">Mật khẩu hoặc Email sai ,vui lòng nhập lại.</p>';
 			

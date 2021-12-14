@@ -4,11 +4,33 @@
     $sql_pro_bonnus = "SELECT * FROM product ORDER BY product_id DESC LIMIT 5";
     $query_pro_bonnus = mysqli_query($mysqli, $sql_pro_bonnus);
 ?>
+
 <?php
-  $sql_chitiet = "SELECT * FROM product  WHERE product_id ='$_GET[id]'";
+    include "class/cart.php";
+    $cart = new cart();
+    $product_id = $_GET['id'];
+?>
+
+<?php
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $quantity = 1;
+        $insertCart = $cart->add_to_cart($product_id, $quantity);
+        if(isset($insertCart))
+        {
+            echo $insertCart;
+        }
+        //$alert = "<script type='text/javascript'> alert ('Sửa sản phẩm thành công');</script>";
+        //echo $alert;
+    }
+?>
+
+<?php
+  $sql_chitiet = "SELECT * FROM product  WHERE product_id = $product_id ";
   $query_chitiet = mysqli_query($mysqli,$sql_chitiet);  
   while($row_chitiet = mysqli_fetch_array($query_chitiet)){
 ?>
+
+
 <div class="page-product-body">
     <div class="page-product-body-left">
             <img src="admin/uploads/<?php echo $row_chitiet['product_image']?>" alt="" style="width:450px; height:450px;"
@@ -26,7 +48,8 @@
                     <a id="next" href="#"><i class="bi bi-chevron-right"></i></a>
                 </div> -->
         </div>
-        <form action="pages/main/themgiohang.php?id=<?php echo $row_chitiet['product_id']?>" method="POST">
+        <!-- action="pages/main/themgiohang.php?id=<?php //echo $row_chitiet['product_id']?>" -->
+        <form method="POST">
             <div class="page-product-body-right">
                 <h2 class="page-product-body-right-title">
                 <?php echo $row_chitiet['product_name']?>
@@ -46,7 +69,7 @@
                     Giá: <?php echo number_format($row_chitiet['product_price'],0,'.','.')." vnđ" ?>
                 </p>
                 
-                <input type="submit" name="themgiohang" value=" +Thêm Giỏ Hàng" class="page-product-body-right-cart">
+                <input type="submit" name="themgiohang" value="+ Thêm Giỏ Hàng" class="page-product-body-right-cart">
                 <div class="page-product-body-right-social">
                     <p>Share</p>
                     <div class="page-product-body-right-social-list">

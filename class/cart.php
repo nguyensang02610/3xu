@@ -22,24 +22,21 @@
 		public function add_to_cart($id, $quantity)
 		{
 			$sId = session_id();
-			
 			$query = "SELECT * FROM product WHERE product_id = '$id' ";
 			$result = $this->db->select($query)->fetch_assoc();
-
 			$productName = $result['product_name'];
-			$price = $result['price_discount'];
-			$image = $result['image'];
-			if($result['tonkho']>$quantity){
-			
-				$query_insert = "INSERT INTO tbl_cart(productId,productName,quantity,sId,productPrice,image) VALUES('$id','$productName','$quantity','$sId','$price','$image' ) ";
+			$price = $result['product_price'];
+			$image = $result['product_image'];
+			if($productName != ''){
+				$query_insert = "INSERT INTO tbl_cart(product_id,product_name,quantity,sId,product_price,image) VALUES('$id','$productName','$quantity','$sId','$price','$image' ) ";
 				$insert_cart = $this->db->insert($query_insert);
-				if($result){
-					echo "<script> window.location = 'cart.php' </script>";
+				if($insert_cart){
+					echo "<script type='text/javascript'> alert ('Thêm sản phẩm vào giỏ hàng thành công');</script>";
 				}else {
-					echo "<script> window.location = './admin/404.html' </script>";
+					echo "<script type='text/javascript'> alert ('Ối bạn ơi');</script>";
 				}
 			}else{
-				$msg = "<span class='erorr'> Số lượng ".$quantity." bạn đặt quá số lượng chúng tôi chỉ còn ".$result['tonkho']." cái</span> ";
+				$msg = "<span class='erorr'>Sản phẩm không tồn tại</span> ";
 				return $msg;
 			}
 		}

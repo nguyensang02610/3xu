@@ -1,16 +1,20 @@
 <?php
 	session_start();
 	include('../../admincp/config/config.php');
-	$id_khachhang = $_SESSION['id_khachhang'];
-	$code_order = rand(0,9999);
-	$insert_cart = "INSERT INTO tbl_cart(id_khachhang,code_cart,cart_status) VALUE('".$id_khachhang."','".$code_order."',1)";
+	include
+	$id_sp = $_SESSION['product_id'];
+	$pr_name = $_GET['product_name'];
+	$quantity= $_GET['quantity'];
+	$sId= $_GET['sId'];
+	$product_price= $_GET['product_price'];
+	$insert_cart = "INSERT INTO tbl_cart(product_id,product_name,quantity,sId,product_price,image) VALUE('".$id_sp."','".$$pr_name."','".$quantity."','".$sId."','".$product_price."','".$image."')";
 	$cart_query = mysqli_query($mysqli,$insert_cart);
 	if($cart_query){
 		//them gio hang chi tiet
 		foreach($_SESSION['cart'] as $key => $value){
-			$id_sanpham = $value['id'];
+			$id_sanpham = $value['product_id'];
 			$soluong = $value['soluong'];
-			$insert_order_details = "INSERT INTO tbl_cart_details(id_sanpham,code_cart,soluongmua) VALUE('".$id_sanpham."','".$code_order."','".$soluong."')";
+			$insert_order_details = "INSERT INTO tbl_cart(product_id,product_name,quantity,sId,product_price,image) VALUE('".$id_sp."','".$$pr_name."','".$quantity."','".$sId."','".$product_price."','".$image."')";
 			mysqli_query($mysqli,$insert_order_details);
 		}
 	}

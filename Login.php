@@ -6,15 +6,15 @@ include "admincp/config/config.php";
 	if(isset($_POST['dangnhap'])){
 		$email = $_POST['email'];
 		$matkhau = md5($_POST['matkhau']);
-		$sql = "SELECT * FROM tbl_dangky WHERE email='".$email."' AND password='".$matkhau."' LIMIT 1";
+		$sql = "SELECT * FROM tbl_dangky WHERE email='".$email."' AND password='".$matkhau."'LIMIT 1 ";
 		$row = mysqli_query($mysqli,$sql);
 		$count = mysqli_num_rows($row);
 
 		if($count>0){
 			$row_data = mysqli_fetch_array($row);
-			$_SESSION['dangky'] = $row_data['tenkhachhang'];
-			$_SESSION['id_kh'] = $row_data['id_dangky'];
-			//header("Location:index.php?quanly=giohang");
+			$_SESSION['dangky'] = $row_data['ten'];
+			$_SESSION['id_dangky'] = $row_data['id_dangky'];
+			header("Location:index.php?quanly=giohang");
 		}else{
 			echo '<p style="color:red">Mật khẩu hoặc Email sai ,vui lòng nhập lại.</p>';
 			

@@ -194,8 +194,10 @@ p.title_product{
 	color: black;
 	font-size: 14px;
 	font-weight: bold;
-  position: static;
   text-align: center;
+  margin:10px 10px;
+  position: sticky;
+
   
 }
 p.price_product{
@@ -203,7 +205,8 @@ p.price_product{
     color: red;
     font-size: 20px;
     font-weight: bold;
-    padding-top: 10px; 
+    padding-top: 10px;
+    position: static; 
 } 
 	/* text-align: center;
 	font-size: 14px;

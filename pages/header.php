@@ -7,13 +7,13 @@
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img class="d-block w-100" src="./img/banner/x1.jpg" alt="Leopard">
+            <img class="d-block w-100" src="./img/banner/x1.jpg" style="width:1261px;height:469px" alt="Leopard">
         </div>
         <div class="carousel-item">
-            <img class="d-block w-100" src="./img/banner/x2.jpg" alt="Cat">
+            <img class="d-block w-100" src="./img/banner/x2.jpg" style="width:1261px;height:469px" alt="Cat">
         </div>
         <div class="carousel-item">
-            <img class="d-block w-100" height="585px" src="./img/banner/x4.jpg" alt="Lion">
+            <img class="d-block w-100" height="585px" src="./img/banner/x4.jpg" style="width:1261px;height:469px" alt="Lion">
         </div>
     </div>
     <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">

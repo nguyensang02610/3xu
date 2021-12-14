@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" || isset($_POST['submit'])) {
                                 <input type="text" name="phone" class="form-control" value="<?php echo $result['phone']?>" required="">
                                 <br>
                                 <label for="firstName" class="form-label">Mật khẩu đăng nhập</label>
-                                <input type="text" name="phone" class="form-control" value="<?php echo $result['password']?>" required="">
+                                <input type="text" name="password" class="form-control" value="<?php echo $result['password']?>" required="">
                                 <br>
                                 <input class=" btn btn-primary btn" value="Xác nhận sửa thông tin nhân viên" type="submit" style="margin-top:50px;"></input>
                                 <!-- Ảnh 1 -->

@@ -85,10 +85,10 @@ if (isset($_GET['id_nhanvien']) AND $_GET['id_nhanvien'] != NULL) {
                                     <td><img class="image_product" src="./uploads/nhanvien/<?php echo $result['image']; ?>"  ></td>
                                     <td><?php echo $result['phone']; ?></td>
                                     <td style="text-align: center;">
-                                        <a href="?nhanvien_id=<?php echo $result['id_nhanvien'] ?>">
+                                        <a href="?id_nhanvien=<?php echo $result['id_nhanvien'] ?>">
                                             <button class="btn_1"><i class="bi bi-x">Xóa</i></button>
                                         </a>
-                                        <a href="nhanvien_edit.php?nhanvien_id=<?php echo $result['id_nhanvien'] ?>">
+                                        <a href="nhanvien_edit.php?id_nhanvien=<?php echo $result['id_nhanvien'] ?>">
                                             <button class="btn_2"><i class="bi bi-pencil">Sửa</i></button>
                                         </a>
                                     </td>

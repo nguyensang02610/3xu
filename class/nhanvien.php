@@ -105,7 +105,7 @@ class nhanvien
 		$file_1 = $_FILES['image']['tmp_name'];//ảnh 1
 		$len = 10;
 		$anh_1 = substr(md5(mt_rand()), 0 ,$len). '.' . $file_ext;//ảnh 1
-		$uploaded_image_1 = "uploads/brand_image/" . $anh_1;//ảnh 1
+		$uploaded_image_1 = "uploads/nhanvien/" . $anh_1;//ảnh 1
 		if ($name == '')
 		{
 			$alert = "<script type='text/javascript'> alert ('Không được để trống tên nhân viên.');</script>";

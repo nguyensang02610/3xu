@@ -80,16 +80,18 @@
   }else{ 
   ?>
   <?php
-    // xoa sp
-    if(isset($_POST['xoasp']) && isset($_POST['id'])){      
-      $id= $_POST['id'];	
-      $cart->del_product_cart($id);
-    } 
-  ?>
+    if (isset($_POST['action'])) {
+      $id=$_GET['id'];
+        switch ($_POST['action']) {
+            case 'del':
+              del_product_cart();
+                break;
+        }
+    }
+?>
   <?php
    $result = $cart->get_product_cart();
-   
-   if($result && mysqli_num_rows($result)) {
+   if(mysqli_num_rows($result) != 0) {
     while($row = mysqli_fetch_array($result))
     {
     echo "<tr>"; 
@@ -101,7 +103,7 @@
     echo "<td>" . $row['product_price'] . "</td>";
     // them
     //echo "<td><a href='pages/main/themgiohang.php?xoa=".$row['cart_id']."'>Xoá</a></td>";
-    echo "<td><form method='POST'><input type='hidden' name='id' value='".$row['cart_id']."'/><input type='submit' name='xoasp' value='Xóa'/></form></td>";
+    echo "<td><a href='pages/main/themgiohang.php?xoa=".$row['cart_id']."'>Xoá</a></td>";
     echo "</tr>";
 
     }

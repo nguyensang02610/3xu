@@ -46,13 +46,13 @@
 	//xoa san pham
 	if(isset($_SESSION['cart'])&&isset($_GET['xoa'])){
 		$id=$_GET['xoa'];
-		foreach($_SESSION['cart'] as $cart_item){
+	/*	foreach($_SESSION['cart'] as $cart_item){
 
 			if($cart_item['id']!=$id){
 				$product[]= array('product_name'=>$cart_item['product_name'],'id'=>$cart_item['id'],'product_quantity'=>$cart_item['product_quantity'],'product_price'=>$cart_item['product_price'],'product_image'=>$cart_item['product_image'],'product_id'=>$cart_item['product_id']);
 			}
 
-		$_SESSION['cart'] = $product; 
+		$_SESSION['cart'] = $product; */
 		header('Location:../../index.php?quanly=giohang');
 		}
 	}

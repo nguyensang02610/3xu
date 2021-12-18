@@ -79,42 +79,23 @@
   <?php 
   }else{ 
   ?>
-  <?php
-    // xoa sp
-    if(isset($_POST['xoasp']) && isset($_POST['id'])){      
-      $id= $_POST['id'];	
-      $cart->del_product_cart($id);
-    } 
-  ?>
+   
   <?php
    $result = $cart->get_product_cart();
-   
-   if($result && mysqli_num_rows($result)) {
-    while($row = mysqli_fetch_array($result))
-    {
-    echo "<tr>"; 
-   // echo "<td>" . $row['image'] . "</td>";
-    echo "<td><img src='admin/uploads/". $row['image']."'width='150px'></td>";
-    echo "<td>" . $row['product_id'] . "</td>";
-    echo "<td>" . $row['product_name'] . "</td>";
-    echo "<td>" . $row['quantity'] . "</td>";
-    echo "<td>" . $row['product_price'] . "</td>";
-    // them
-    //echo "<td><a href='pages/main/themgiohang.php?xoa=".$row['cart_id']."'>Xoá</a></td>";
-    echo "<td><form method='POST'><input type='hidden' name='id' value='".$row['cart_id']."'/><input type='submit' name='xoasp' value='Xóa'/></form></td>";
-    echo "</tr>";
-
-    }
-     
+   if( ! mysqli_num_rows($nearbyResult) ) {
+   while($row = mysqli_fetch_array($result))
+   {
+   echo "<tr>"; 
+   echo "<td>" . $row['cart_id'] . "</td>";
+   echo "<td>" . $row['product_id'] . "</td>";
+   echo "<td>" . $row['product_name'] . "</td>";
+   echo "</tr>";
    }
-   else{
-    echo " <tr><td colspan='8'><p>Hiện tại giỏ hàng trống</p></td></tr>";
-   }
-  
+  }
+  echo "<tr><td colspan="8"><p>Hiện tại giỏ hàng trống</p></td></tr>";
    //echo $insertCart['cart_id'];
   } 
   ?>
-  
  
 </table>
 <!--------------------------------->

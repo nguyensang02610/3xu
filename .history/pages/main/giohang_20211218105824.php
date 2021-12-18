@@ -81,8 +81,8 @@
   ?>
   <?php
     // xoa sp
-    if(isset($_POST['xoasp']) && isset($_POST['id'])){      
-      $id= $_POST['id'];	
+    if(isset($_POST['xoasp'])){      
+      $id=$_POST['id'];	
       $cart->del_product_cart($id);
     } 
   ?>

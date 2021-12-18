@@ -22,6 +22,7 @@
 		public function add_to_cart($id, $quantity)
 		{
 			$sId = session_id();
+			echo $sId;
 			$query = "SELECT * FROM product WHERE product_id = '$id' ";
 			$result = $this->db->select($query)->fetch_assoc();
 			$productName = $result['product_name'];
@@ -79,11 +80,11 @@
 
 		}
 		public function del_product_cart($cartid){
-		//	$cartid = mysqli_real_escape_string($this->db->link, $cartid);
-			$query = "DELETE FROM tbl_cart WHERE 	cart_id = '$cartid'";
+			$cartid = mysqli_real_escape_string($this->db->link, $cartid);
+			$query = "DELETE FROM tbl_cart WHERE cartId = '$cartid'";
 			$result = $this->db->delete($query);
 			if($result){
-				//header('Location:cart.php');
+				header('Location:cart.php');
 			}else{
 				$msg = "<span class='error'>Sản phẩm đã được xóa</span>";
 				return $msg;

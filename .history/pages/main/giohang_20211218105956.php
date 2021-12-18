@@ -101,7 +101,7 @@
     echo "<td>" . $row['product_price'] . "</td>";
     // them
     //echo "<td><a href='pages/main/themgiohang.php?xoa=".$row['cart_id']."'>Xoá</a></td>";
-    echo "<td><form method='POST'><input type='hidden' name='id' value='".$row['cart_id']."'/><input type='submit' name='xoasp' value='Xóa'/></form></td>";
+    echo "<td><form method='POST'><input  name='id' value='".$row['cart_id']."'/><input type='submit' name='xoasp' value='Xóa'/></form></td>";
     echo "</tr>";
 
     }

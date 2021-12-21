@@ -61,7 +61,7 @@ if (isset($delBrand)) {
                         ?>
 
                                 <tr>
-                                    <td>#<?php echo $result['customer_id'] ?></td>
+                                    <td>#<?php echo $result['id_kh'] ?></td>
                                     <td><?php echo $result['ho'] .' '. $result['ten'] ?></td>
                                     <td><?php echo $result['email'] ?></td>
                                     <td><?php echo $result['diachi'] ?></td>

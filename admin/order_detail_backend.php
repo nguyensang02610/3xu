@@ -1,5 +1,4 @@
 <?php include './inc/header.php'; ?>
-<?php include '../class/cart.php' ?>
 
 <link rel="stylesheet" href="./css/order_detail.css">
 

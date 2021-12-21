@@ -33,7 +33,7 @@
 				if($insert_cart){
 					echo "<script type='text/javascript'> alert ('Thêm sản phẩm vào giỏ hàng thành công');</script>";
 				}else {
-					echo "<script type='text/javascript'> alert ('Ối bạn ơi');</script>";
+					echo "<script type='text/javascript'> alert ('Không thêm được giỏ hàng');</script>";
 				}
 			}else{
 				$msg = "<span class='erorr'>Sản phẩm không tồn tại</span> ";
@@ -147,20 +147,20 @@
 			if($get_product)
 			{
 				while($result = $get_product->fetch_assoc()){
-					$productid = $result['productId'];//Product id
-					$productName = $result['productName'];//Tên sản phẩm đc chèn vào giở hàng
+					$productid = $result['product_id'];//Product id
+					$productName = $result['product_name'];//Tên sản phẩm đc chèn vào giở hàng
 					$quantity = $result['quantity'];//;Số lượng của sản phẩm đó trong giỏ hàng
-					$price = $result['price'] * $quantity;//Tổng tiền bằng số lượng * giá tiền trong giỏ hàng
+					$price = $result['product_price'] * $quantity;//Tổng tiền bằng số lượng * giá tiền trong giỏ hàng
 					$query_insert_detail = "INSERT INTO tbl_order_details(id_order,id_sanpham,tensp,soluong,thanhtien) VALUES ('$id_order','$productid','$productName','$quantity','$price')";//Thêm sản phẩm vào bằng chi tiết giỏ hàng
 					$insert_order = $this->db->insert($query_insert_detail);
 					$tong_sl += $quantity;
 					$tong_gia += $price;
 				}
 			}
-			$address = Session::get('customer_diachi');
-			$phone = Session::get('customer_phone');
-			$ho = Session::get('customer_ho');
-			$ten = Session::get('customer_ten');
+			$address = $_SESSION['customer_diachi'];
+			$phone = $_SESSION['customer_phone'];
+			$ho = $_SESSION['customer_ho'];
+			$ten = $_SESSION['customer_ten'];
 			$name = $ho.' '.$ten;
 			$query_update = "UPDATE tbl_order SET quantity = $tong_sl, price = $tong_gia ,ho_ten = '$name' , address = '$address', phone = '$phone', status = 0 WHERE id = '$id_order'"; //(quantity,price,status) VALUES ('$tong_sl','$tong_gia',0)
 			$query_order = $this->db->update($query_update);
@@ -238,7 +238,7 @@
 
 		public function get_order_with_in4()
 		{
-			$query = "SELECT id, ho, ten, address, tbl_order.phone , status, quantity , price , date_order FROM tbl_order, tbl_customer WHERE tbl_order.customer_id = tbl_customer.customer_id";
+			$query = "SELECT id, ho, ten, address, tbl_order.phone , status, quantity , price , date_order FROM tbl_order, tbl_customer WHERE tbl_order.customer_id = tbl_customer.id_kh";
 			$get_order = $this->db->select($query);
 			return $get_order;
 		}

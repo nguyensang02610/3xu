@@ -35,8 +35,8 @@ $result_order = $order_list->fetch_assoc();
     <!--onload="window.print();" -->
     <div id="page" class="page">
         <div class="header">
-            <div class="logo"><img src="./img/logo.png" width="120px"></div>
-            <div class="company">Công Ty TNHH MTV Apple</div>
+            <div class="logo"><img src="./img/logo2.png" width="120px"></div>
+            <div class="company">Company HNH</div>
         </div>
         <br />
         <div class="title">

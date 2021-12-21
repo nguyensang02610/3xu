@@ -1,6 +1,5 @@
 <div style="clear: both;">
 <footer class="bg-light text-center text-white">
-  Grid container
   <div class="container p-4 pb-0">
     <!-- Section: Social media -->
     <section class="mb-4">

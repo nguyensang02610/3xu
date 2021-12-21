@@ -5,15 +5,20 @@ include "admincp/config/config.php";
 <?php
 	if(isset($_POST['dangnhap'])){
 		$email = $_POST['email'];
-		$matkhau = md5($_POST['matkhau']);
-		$sql = "SELECT * FROM tbl_dangky WHERE email='".$email."' AND password='".$matkhau."'LIMIT 1 ";
+		$matkhau = $_POST['matkhau'];
+		$sql = "SELECT * FROM tbl_customer WHERE email='".$email."' AND password='".$matkhau."'LIMIT 1 ";
 		$row = mysqli_query($mysqli,$sql);
 		$count = mysqli_num_rows($row);
 
 		if($count>0){
 			$row_data = mysqli_fetch_array($row);
 			$_SESSION['dangky'] = $row_data['ten'];
-			$_SESSION['id_dangky'] = $row_data['id_dangky'];
+			$_SESSION['id_dangky'] = $row_data['id_kh'];
+      //Set session
+      $_SESSION['customer_diachi'] = $row_data['diachi'];
+      $_SESSION['customer_phone'] = $row_data['phone'];
+      $_SESSION['customer_ho'] = $row_data['ho'];
+      $_SESSION['customer_ten'] = $row_data['ten'];
 			header("Location:index.php?quanly=giohang");
 		}else{
 			echo '<p style="color:red">Mật khẩu hoặc Email sai ,vui lòng nhập lại.</p>';
@@ -44,7 +49,7 @@ include "admincp/config/config.php";
       
                   <div class="form-outline mb-4">
                     <label class="form-label" for="typeEmailX">Email</label>
-                    <input type="email" name="email" id="typeEmailX" class="form-control form-control-lg" />
+                    <input type="text" name="email" id="typeEmailX" class="form-control form-control-lg" />
                   </div>
       
                   <div class="form-outline mb-4">

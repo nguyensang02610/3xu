@@ -10,9 +10,9 @@ session_start();
     $hokhachhang = $_POST['ho'];
 		$email = $_POST['email'];
 		$sdt = $_POST['phone'];
-		$matkhau = md5($_POST['password']);
+		$matkhau = $_POST['password'];
 		$diachi = $_POST['diachi'];
-		$sql_dangky = mysqli_query($mysqli,"INSERT INTO tbl_dangky(ho,ten,email,diachi,password,phone) VALUE('".$hokhachhang."','".$tenkhachhang."','".$email."','".$diachi."','".$matkhau."','".$sdt."')");
+		$sql_dangky = mysqli_query($mysqli,"INSERT INTO tbl_customer(ho,ten,email,password,diachi,phone) VALUE('".$hokhachhang."','".$tenkhachhang."','".$email."','".$matkhau."','".$diachi."','".$sdt."')");
 		if($sql_dangky){
 			echo '<p style="color:green">Bạn đã đăng ký thành công</p>';
 			$_SESSION['dangky'] = $tenkhachhang;

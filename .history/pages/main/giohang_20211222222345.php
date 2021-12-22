@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" || isset($_POST['submit'])) {
         <th>Mã sản phẩm</th>
         <th>Tên sản phẩm</th>
         <th>Số lượng</th>
-        <th>Giá sản phẩm</th>
+        <th>Thành tiền</th>
         <th>Quản Lý</th>
       </tr>
     </thead>
@@ -121,20 +121,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" || isset($_POST['submit'])) {
           //echo "<td><a href='pages/main/themgiohang.php?xoa=".$row['cart_id']."'>Xoá</a></td>";
           echo "<td><input type='button' value='Xóa' onclick='xoasp(".$row['cart_id'].")'/><input type='button' value='Cập nhật' onclick='capnhatsp(".$row['cart_id'].",".$row['product_id'] .")'/></td>";
           echo "</tr>";
-          $thanhtien=$row['product_price']*(int)$row['quantity'];
+          $thanhtien=$row['product_price']*$row['quantity'];
           $tongtien+=$thanhtien;
           
         }
       } else {
         echo " <tr><td colspan='8'><p>Hiện tại giỏ hàng trống</p></td></tr>";
       }
+
+      //echo $insertCart['cart_id'];
       ?>
   </table>
   <!--------------------------------->
-  <div style="margin-bottom:20px;text-align:center ;position:relative">
+  <div style="margin-bottom:20px;text-align:center ">
     <button type="submit" name="thanhtoan" class="btn btn-outline-primary" style="background-color:#FF5403;color:aliceblue">Đặt hàng</button>
-    <p style="text-align:right;font-weight:bold;color:#FF5403">Tổng tiền: <?php echo number_format($tongtien, 0, ',', '.') . 'vnđ' ?></p><br />
-    <button onclick="xoaall()" class="btn btn-outline-primary" style="margin-left:1100px;background-color:#FF5403;color:aliceblue; position:absolute;top:0;right:0;">Xóa tất cả</button>
+    <p style="text-align:left;font-weight:bold;color:#FF5403">Tổng tiền: <?php echo number_format($tongtien, 0, ',', '.') . 'vnđ' ?></p><br />
+    <button onclick="xoaall()" class="btn btn-outline-primary" style="margin-left:650px;background-color:#FF5403;color:aliceblue">Xóa tất cả</button>
   </div>
 </form>
 <script>

@@ -184,6 +184,7 @@ ul.product_list li img {
     width: 295px;
     height: 295px;
     display:table;
+    margin: 10px 10px 10px 10px;
 }
 ul.product_list li:hover img{
 	transform: translateY(-10px);
@@ -213,7 +214,7 @@ p.price_product{
 p.cate_product{
   position: absolute;
   left: 50%;
-  bottom: 40px;
+  bottom: 20px;
   transform: translateX(-50%);
 }
 	/* text-align: center;

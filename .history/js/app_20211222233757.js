@@ -1,6 +1,6 @@
 $(".slider").slick({
     dots: false,
-    infinite: true,
+    infinite: false,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
@@ -40,7 +40,7 @@ $(".slider").slick({
 });
 $(".product_list").slick({
     dots: false,
-    infinite: true,
+    infinite: false,
     slidesToShow: 4,
     slidesToScroll: 2,
     autoplay: true,

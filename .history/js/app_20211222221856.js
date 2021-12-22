@@ -1,10 +1,10 @@
 $(".slider").slick({
     dots: false,
-    infinite: true,
+    infinite: false,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
     prevArrow:
         '<button class="slick-prev slick-arrow"><i class="fa-solid fa-angle-left" aria-hidden="true"></i></button>',
     nextArrow:
@@ -40,7 +40,7 @@ $(".slider").slick({
 });
 $(".product_list").slick({
     dots: false,
-    infinite: true,
+    infinite: false,
     slidesToShow: 4,
     slidesToScroll: 2,
     autoplay: true,

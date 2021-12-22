@@ -51,31 +51,28 @@
 
 		public function update_quantity_Cart($proId,$cartId, $quantity)
 		{
-			$quantity = mysqli_real_escape_string($this->db->link, $quantity);
-			$cartId = mysqli_real_escape_string($this->db->link, $cartId);
-			$proId = mysqli_real_escape_string($this->db->link, $proId);
+			//$quantity = mysqli_real_escape_string($this->db->link, $quantity);
+			//$cartId = mysqli_real_escape_string($this->db->link, $cartId);
+			//$proId = mysqli_real_escape_string($this->db->link, $proId);
 
-			$query_product = "SELECT * FROM product WHERE product_id = '$proId' ";
-			$result_product = $this->db->select($query_product)->fetch_assoc();
+			//$query_product = "SELECT * FROM product WHERE product_id = '$proId' ";
+			//$result_product = $this->db->select($query_product)->fetch_assoc();
 
-			if($quantity<$result_product['tonkho'])
-            {
-				$query = "UPDATE tbl_cart SET
-
-			   quantity = '$quantity'
-				WHERE cartId = '$cartId'";
-
+		//	if($quantity<$result_product['tonkho'])
+          //  {
+				//$query = "UPDATE tbl_cart SET  quantity = '$quantity' WHERE cartId = '$cartId'";
+				$query = "UPDATE tbl_cart SET  quantity = '$quantity' WHERE cart_Id = '$cartId'";
 				$result = $this->db->update($query);
-				if ($result) {
-					echo "<script> window.location = 'cart.php' </script>";
-				}else {
-					$msg = "<span class='erorr'> Product Quantity Update NOT Succesfully</span> ";
-					return $msg;
-				}
-			}else{
+				//if ($result) {
+				//	echo "<script> window.location = 'cart.php' </script>";
+				//}else {
+				//	$msg = "<span class='erorr'> Product Quantity Update NOT Succesfully</span> ";
+				//	return $msg;
+				///}
+		/*	}else{
 				$msg = "<span class='erorr'> Số lượng ".$quantity." bạn đặt quá số lượng chúng tôi chỉ còn ".$result_product['tonkho']." cái</span> ";
 				return $msg;
-			}
+			}*/
 
 		}
 		public function del_product_cart($cartid){

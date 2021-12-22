@@ -2,7 +2,7 @@
 <p>
   <?php
   if (isset($_SESSION['dangky'])) {
-    echo 'xin chào: ' . '<span style="color:red">' . $_SESSION['dangky'] . '</span>';
+    echo 'Xin chào: ' . '<span style="color:red">' . $_SESSION['dangky'] . '</span>';
   }
   ?>
 </p>
@@ -15,27 +15,50 @@ if (isset($_SESSION['cart']))
 include "class/cart.php";
 $cart = new cart();
 $fm = new Format();
+$tongtien = 0;
 ?>
 
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST" || isset($_POST['submit'])) {
   //echo "<script>alert('ỐI BẠN ƠI ');</script>";
-  $customer_id = $_SESSION['id_dangky'] ;
-  $insertOrder = $cart->insertOrder_2($customer_id);
-  $delCart = $cart->del_all_data_cart();
-  if ($insertOrder)
-  {
-      echo "<script> window.location = 'susscess_order.html' </script>";
+  if( isset($_POST['thanhtoan'])){
+    $customer_id = $_SESSION['id_dangky'] ;
+    $insertOrder = $cart->insertOrder_2($customer_id);
+    $delCart = $cart->del_all_data_cart();
+    if ($insertOrder)
+    {
+        echo "<script> window.location = 'susscess_order.html' </script>";
+    }
+    else
+    {
+        echo "<script> atler 'Đơn hàng chưa được thành công, vui lòng liên hệ chủ website.' </script>";
+    }
   }
-  else
-  {
-      echo "<script> atler 'Đơn hàng chưa được thành công, vui lòng liên hệ chủ website.' </script>";
+  else  if (isset($_POST['action'])) {
+     // xoa sp
+     if($_POST['action']=='xoasp'){
+      echo "<script>alert('ỐI BẠN ƠI ');</script>";
+      $id = $_POST['id'];
+      $cart->del_product_cart($id);
+    }
+    else if($_POST['action']=='capnhatsp'){
+      $id = $_POST['id'];
+      $quantity = $_POST['quantity'];
+      $product_id = $_POST['product_id'];
+      $cart->update_quantity_Cart($product_id,$id,$quantity);
+    }
+    else if($_POST['action']=='xoaall'){
+
+      $cart->del_all_data_cart();
+    }
   }
 }
 ?>
 <form method="POST">
   <table style="width:100%; text-align:center" class="table table-bordered">
-    <thead class="table-primary">
+    <thead 
+    
+    class="table-primary">
       <tr>
         <th>Hình ảnh</th>
         <th>Mã sản phẩm</th>
@@ -65,14 +88,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" || isset($_POST['submit'])) {
           </td>
           <td><?php echo $fm->currency_format($cart_item['product_price']) ?></td>
           <td><?php echo number_format($thanhtien, 0, ',', '.') . 'vnđ' ?></td>
-          <td><a href="pages/main/themgiohang.php?xoa=<?php echo $cart_item['id'] ?>">Xoá</a></td>
+          <!-- <td><a href="pages/main/themgiohang.php?xoa=<?php echo $cart_item['id'] ?>">Xoá</a></td> -->
         </tr>
       <?php
       }
       ?>
       <tr>
         <td colspan="8">
-          <a style="float: right; margin-left: 200px" href="pages/main/themgiohang.php?xoatatca=1">Xoá tất cả</a>
+          <!-- <a style="float: right; margin-left: 200px" href="pages/main/themgiohang.php?xoatatca=1">Xoá tất cả</a> -->
           <p style="text-align:right;font-weight:bold;color:#FF5403">Tổng tiền: <?php echo number_format($tongtien, 0, ',', '.') . 'vnđ' ?></p><br />
           <!-- <button style="float: right; margin-bottom: 50px"><a href="pages/main/themgiohang.php?xoatatca=1">Xoá tất cả</a></button> -->
           <div style="clear: both;"></div>
@@ -82,13 +105,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" || isset($_POST['submit'])) {
 
         </td>
       </tr>
-      <?php
-      // xoa sp
-      if (isset($_POST['xoasp']) && isset($_POST['id'])) {
-        $id = $_POST['id'];
-        $cart->del_product_cart($id);
-      }
-      ?>
+      
       <?php
       $result = $cart->get_product_cart();
       if ($result && mysqli_num_rows($result)) {
@@ -98,12 +115,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" || isset($_POST['submit'])) {
           echo "<td><img src='admin/uploads/" . $row['image'] . "'width='150px'></td>";
           echo "<td>" . $row['product_id'] . "</td>";
           echo "<td>" . $row['product_name'] . "</td>";
-          echo "<td>" . $row['quantity'] . "</td>";
+          echo "<td>" . "<input type='number' id='".$row['cart_id']."' value='". (int)$row['quantity'] . "' min='0' style='width:55px'/></td>";
           echo "<td>" . $row['product_price'] . "</td>";
           // them
           //echo "<td><a href='pages/main/themgiohang.php?xoa=".$row['cart_id']."'>Xoá</a></td>";
-          echo "<td><form method='POST'><input type='hidden' name='id' value='" . $row['cart_id'] . "'/><input type='submit' name='xoasp' value='Xóa'/></form></td>";
+          echo "<td><input type='button' value='Xóa' onclick='xoasp(".$row['cart_id'].")'/><input type='button' value='Cập nhật' onclick='capnhatsp(".$row['cart_id'].",".$row['product_id'] .")'/></td>";
           echo "</tr>";
+          $tongtien+=$row['product_price'];
         }
       } else {
         echo " <tr><td colspan='8'><p>Hiện tại giỏ hàng trống</p></td></tr>";
@@ -114,6 +132,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" || isset($_POST['submit'])) {
   </table>
   <!--------------------------------->
   <div style="margin-bottom:20px;text-align:center ">
-    <button type="submit" class="btn btn-outline-primary">Đặt hàng</button>
+    <button type="submit" name="thanhtoan" class="btn btn-outline-primary" style="background-color:#FF5403;color:aliceblue">Đặt hàng</button>
+    <p style="text-align:left;font-weight:bold;color:#FF5403">Tổng tiền: <?php echo number_format($tongtien, 0, ',', '.') . 'vnđ' ?></p><br />
+    <button onclick="xoaall()" class="btn btn-outline-primary" style="margin-left:650px;background-color:#FF5403;color:aliceblue">Xóa tất cả</button>
   </div>
 </form>
+<script>
+function xoasp(id) {
+    $.post('./index.php?quanly=giohang', {
+        'action': 'xoasp',
+        'id': id
+    }, function(data){
+        location.reload();
+    })
+}
+function capnhatsp(id,product_id) {
+  var quantity = document.getElementById(id).value;
+  //alert(quantity)
+    $.post('./index.php?quanly=giohang', {
+        'action': 'capnhatsp',
+        'id': id,
+        'quantity': quantity,
+        'product_id': product_id
+    }, function(data){
+        location.reload();
+    })
+}
+function xoaall(){
+  $.post('./index.php?quanly=giohang', {
+        'action': 'xoaall',
+    }, function(data){
+        location.reload();
+    })
+}
+</script>
